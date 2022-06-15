@@ -7,7 +7,7 @@
 - [Server2 mobile](/client-conf/vpnclient2.mobileconfig)
 - [Server2 swan](/client-conf/vpnclient2.sswan)
 - [Server3 mobile](/client-conf/vpnclient3.mobileconfig)
-- [Server3 mobile](/client-conf/vpnclient3.sswan)
+- [Server3 swan](/client-conf/vpnclient3.sswan)
 
 ## Installation
 
