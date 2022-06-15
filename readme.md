@@ -3,7 +3,7 @@
 
 * [Windows 7, 8, 10 and 11](#windows-7-8-10-and-11)
 * [OS X (macOS)](#os-x-macos)
-* [iOS (iPhone/iPad)](#ios)
+* [iOS (iPhone/iPad)](#ios-iphoneipad)
 * [Android](#android)
 * [Linux](#linux)
 
