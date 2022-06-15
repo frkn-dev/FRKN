@@ -9,7 +9,6 @@
 - [Server3 mobile](/client-conf/vpnclient3.mobileconfig)
 - [Server3 mobile](/client-conf/vpnclient3.sswan)
 
-
 ## Installation
 
 * [**Windows 7, 8, 10 and 11**](#windows-7-8-10-and-11)
