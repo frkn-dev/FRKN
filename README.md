@@ -22,9 +22,10 @@
 ### Android
 1. Download "strongSwan VPN Client" from Google Play.
 2. Download vpnclient.sswan file to your device.
-3. Press the button in the right-upper angle > Import VPN profile > Choose the file.
+3. Press the button in the top right corner > Import VPN profile > Choose the file.
 4. Choose the VPN certificate. 
 5. Connect to the VPN.
 
 ### Linux
 - in progress 
+ 
