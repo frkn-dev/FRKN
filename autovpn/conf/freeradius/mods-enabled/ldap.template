@@ -1,0 +1,93 @@
+ldap {
+	server = '#LDAP_URI#'
+	port = #LDAP_PORT#
+	identity = '#LDAP_IDENTITY#'    #'cn=admin,dc=example,dc=org'
+	password = '#LDAP_PASSWORD#'
+	base_dn = '#LDAP_BASE_DN#'
+	sasl {
+	}
+	update {
+		control:Password-With-Header	+= 'userPassword'
+		control:			+= 'radiusControlAttribute'
+		request:			+= 'radiusRequestAttribute'
+		reply:				+= 'radiusReplyAttribute'
+	}
+	user {
+                base_dn = "#USER_BASE_DN#"
+				filter = "(userPrincipalName=%{%{Stripped-User-Name}:-%{User-Name}})"
+                #filter = "(sAMAccountName=%{%{Stripped-User-Name}:-%{User-Name}})"
+		sasl {
+		}
+		scope = 'one'
+	}
+	group {
+		base_dn = "#GROUP_BASE_DN#"
+		filter = '(cn=#GROUP_CN#)'
+		scope = 'one'
+		name_attribute = cn
+		membership_filter = "(|(member=%{control:Ldap-UserDn})(memberUid=%{%{Stripped-User-Name}:-%{User-Name}}))"
+		membership_attribute = 'memberOf'
+	}
+	profile {
+	}
+	client {
+		base_dn = "${..base_dn}"
+		filter = '(objectClass=radiusClient)'
+		template {
+		}
+		attribute {
+			ipaddr				= 'radiusClientIdentifier'
+			secret				= 'radiusClientSecret'
+		}
+	}
+	accounting {
+		reference = "%{tolower:type.%{Acct-Status-Type}}"
+		type {
+			start {
+				update {
+					description := "Online at %S"
+				}
+			}
+			interim-update {
+				update {
+					description := "Last seen at %S"
+				}
+			}
+			stop {
+				update {
+					description := "Offline at %S"
+				}
+			}
+		}
+	}
+	post-auth {
+		update {
+			description := "Authenticated at %S"
+		}
+	}
+	options {
+		dereference = 'always'
+		chase_referrals = yes
+		rebind = yes
+		res_timeout = 10
+		srv_timelimit = 3
+		net_timeout = 1
+		idle = 60
+		probes = 3
+		interval = 3
+		ldap_debug = 0x0028
+	}
+	tls {
+		require_cert	= 'allow'
+	}
+	pool {
+		start = ${thread[pool].start_servers}
+		min = ${thread[pool].min_spare_servers}
+		max = ${thread[pool].max_servers}
+		spare = ${thread[pool].max_spare_servers}
+		uses = 0
+		retry_delay = 30
+		lifetime = 0
+		idle_timeout = 60
+	}
+}

@@ -1,0 +1,47 @@
+version 2.0
+
+config setup
+  virtual-private=%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v4:!#L2TP_NET#,%v4:!#XAUTH_NET#
+  protostack=netkey
+  interfaces=%defaultroute
+  uniqueids=no
+
+conn shared
+  left=%defaultroute
+  leftid=#PUBLIC_IP#
+  right=%any
+  encapsulation=yes
+  authby=secret
+  pfs=no
+  rekey=no
+  keyingtries=5
+  dpddelay=30
+  dpdtimeout=120
+  dpdaction=clear
+  ike=aes256-sha2,aes128-sha2,aes256-sha1,aes128-sha1,aes256-sha2;modp1024,aes128-sha1;modp1024
+  phase2alg=aes_gcm-null,aes128-sha1,aes256-sha1,aes256-sha2_512,aes128-sha2,aes256-sha2
+  sha2-truncbug=yes
+
+conn l2tp-psk
+  auto=add
+  leftprotoport=17/1701
+  rightprotoport=17/%any
+  type=transport
+  phase2=esp
+  also=shared
+
+conn xauth-psk
+  auto=add
+  leftsubnet=0.0.0.0/0
+  rightaddresspool=#XAUTH_POOL#
+  modecfgdns=#DNS_SRVS#
+  leftxauthserver=yes
+  rightxauthclient=yes
+  leftmodecfgserver=yes
+  rightmodecfgclient=yes
+  modecfgpull=yes
+  xauthby=file
+  ike-frag=yes
+  ikev2=never
+  cisco-unity=yes
+  also=shared
