@@ -1,0 +1,12 @@
+[Unit]
+Description = Load /etc/iptables.rules
+DefaultDependencies=no
+Before=network-pre.target
+Wants=network-pre.target
+Wants=systemd-modules-load.service local-fs.target
+After=systemd-modules-load.service local-fs.target
+[Service]
+Type=oneshot
+ExecStart=/etc/network/if-pre-up.d/iptablesload
+[Install]
+WantedBy=multi-user.target

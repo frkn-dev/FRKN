@@ -1,0 +1,11 @@
+[global]
+port = 1701
+ipsec saref = no
+force userspace = yes
+[lns default]
+ip range = #L2TP_POOL#
+local ip = #L2TP_LOCAL#
+require authentication = yes
+name = l2tpd
+pppoptfile = /etc/ppp/options.xl2tpd
+length bit = yes

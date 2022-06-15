@@ -1,0 +1,21 @@
+#TODO Fill example config file
+
+RADIUS=yes
+YOUR_IPSEC
+L2TP_NET
+L2TP_LOCAL
+L2TP_POOL
+XAUTH_NET
+XAUTH_POOL
+DNS_SRV1
+DNS_SRV2
+DNS_SRVS
+
+#    LDAP_URI=''
+#    LDAP_PORT=''
+#    LDAP_IDENTITY=''
+#    LDAP_PASSWORD=''
+#    LDAP_BASE_DN=''
+#    USER_BASE_DN=''
+#    GROUP_BASE_DN=''
+#    GROUP_CN=''
