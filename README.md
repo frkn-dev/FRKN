@@ -8,10 +8,10 @@
 * [Linux](#linux)
 
 ### Windows 7, 8, 10 and 11
-- in progress - 
+- in progress
 
 ### OS X (macOS)
-- in progress - 
+- in progress 
 
 ### iOS (iPhone/iPad)
 1. Download the vpnclient.mobileconfig file to your device.
@@ -27,4 +27,4 @@
 5. Connect to the VPN.
 
 ### Linux
-- in progress - 
+- in progress 
