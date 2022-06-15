@@ -1,4 +1,14 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
+
+## Файлы конфигурации 
+
+- [Server1 mobile](/client-conf/vpnclient1.mobileconfig)
+- [Server1 swan](/client-conf/vpnclient1.sswan)
+- [Server2 mobile](/client-conf/vpnclient2.mobileconfig)
+- [Server2 swan](/client-conf/vpnclient2.sswan)
+- [Server3 mobile](/client-conf/vpnclient3.mobileconfig)
+- [Server3 swan](/client-conf/vpnclient3.sswan)
+
 ## Установка
 
 * [**Windows 7, 8, 10 and 11**](#windows-7-8-10-and-11)
