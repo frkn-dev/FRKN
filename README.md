@@ -1,20 +1,20 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 ## Installation
 
-* [Windows 7, 8, 10 and 11](#windows-7-8-10-and-11)
-* [OS X (macOS)](#os-x-macos)
-* [iOS (iPhone/iPad)](#ios-iphoneipad)
-* [Android](#android)
-* [Linux](#linux)
+* [**Windows 7, 8, 10 and 11**](#windows-7-8-10-and-11)
+* [**OS X (macOS)**](#os-x-macos)
+* [**iOS (iPhone/iPad)**](#ios-iphoneipad)
+* [**Android**](#android)
+* [**Linux**](#linux)
 
 ### Windows 7, 8, 10 and 11
-- in progress
+- In progress
 
 ### OS X (macOS)
-- in progress 
+- In progress 
 
 ### iOS (iPhone/iPad)
-1. Download the ``vpnclient.mobileconfig`` file to your device.
+1. Download the **``vpnclient.mobileconfig``** file to your device.
 2. Move the file to the "On my iPhone" folder.
 3. Open **``Settings``** and **install** the profile.
 4. Go to **``Settings``** > **``VPN``** and connect.
@@ -27,4 +27,4 @@
 5. Connect to the **``VPN``**.
 
 ### Linux
-- in progress 
+- In progress 
