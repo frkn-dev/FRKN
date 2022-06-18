@@ -25,7 +25,7 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 
 ### Windows 7, 8, 10 and 11
 1. Download the **``vpnclient.p12``** file to your device.
-2. Download config import script and put it in the same folder as p12 file.
+2. Download **``config import script``** and put it in the same folder as p12 file.
 3. Right-click on the saved script, select Properties. Click on Unblock at the bottom, then click on OK.
 4. Right-click on the saved script, select Run as administrator.
 5. Choose the VPN client name (or just press Enter, it will choose the file's name)
