@@ -1,6 +1,10 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
 ## Client Configuration Files 
+**Windows**
+Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**Server 1 p12**](/client-conf/vpnclient1.p12)
+
 **iOS:**
 - [**Server1 mobile**](/client-conf/vpnclient1.mobileconfig)
 - [**Server2 mobile**](/client-conf/vpnclient2.mobileconfig)
@@ -20,7 +24,15 @@
 * [**Linux**](#linux)
 
 ### Windows 7, 8, 10 and 11
-- In progress
+1. Download the **``vpnclient.p12``** file to your device.
+2. Download config import script and put it in the same folder as p12 file.
+3. Right-click on the saved script, select Properties. Click on Unblock at the bottom, then click on OK.
+4. Right-click on the saved script, select Run as administrator.
+5. Choose the VPN client name (or just press Enter, it will choose the file's name)
+6. Enter IP of the server, you can find it in the [**here**](#client-configuration-files)
+7. Choose the VPN connection name (or just press Enter)
+8. Press any key to finish script.
+To connect to the VPN: Click on the wireless/network icon in your system tray, select the new VPN entry, and click Connect.
 
 ### OS X (macOS)
 - In progress 
