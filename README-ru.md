@@ -1,7 +1,7 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
 ## Файлы конфигурации
-**Windows**
+**Windows:**
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
 - [**Server 1 p12**](/client-conf/vpnclient1.p12) / Server IP: 89.40.1.114
 
