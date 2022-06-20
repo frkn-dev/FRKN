@@ -121,7 +121,7 @@ body{
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     color: var(--header-text-color);
     bottom: 0;
 }
@@ -135,7 +135,7 @@ body{
     border-radius: 8px;
 }
 
-.page-footer{;
+.page-footer{
     bottom: 0;
     margin-top: 1em;
     background: var(--footer-bg-color);
@@ -143,7 +143,7 @@ body{
     min-height: 60px;
     padding: 12px 24px;
     width: 100%;
-    text-align: center;
+    text-align: match-parent;
 }
 
 .footer-wrapper{
@@ -165,10 +165,10 @@ body{
 .footer-content{
   height: auto;
   color: var(--header-text-color);
-  display: flex;
+  display: contents;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: normal;
+  justify-content: left;
   margin-inline: auto;
 }
 
