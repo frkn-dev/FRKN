@@ -9,11 +9,15 @@ h1, h2, h3, h4, h5, button, a, body, footer, ul {
 }
 
 :root {
-    --main-bg-color: #fafafa;
-    --header-bg-color: #0a0a0a;
+    --main-bg-color-0: #FFFFFF;
+    --main-bg-color-25: #DEDEDE;
+    --main-bg-color-50: #CBCBCB;
+    --main-bg-color-75: #DEDEDE;
+    --main-bg-color-100: #bdbdbd;
+    --header-bg-color: rgba(10, 10, 10, 0.55);
     --header-text-color: #ffffff;
     --text-color: #000000;
-    --gray-color: #808080;
+    --gray-color: #d5d5d5;
     --page-max-width: 1024px;
     --accent-color: #EF5018;
     --footer-bg-color: #161616;
@@ -23,8 +27,22 @@ h1, h2, h3, h4, h5, button, a, body, footer, ul {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--main-bg-color);
     color: var(--text-color);
+    background: linear-gradient(
+            90deg,
+            var(--main-bg-color-0),
+            var(--main-bg-color-50),
+            var(--main-bg-color-100)
+    );
+    background-size: 400% 400%;
+    animation: backgroundColorAnimation 10s ease infinite;
+    height: 100vh;
+    padding-top: 60px;
+
+    /*animation-name: backgroundColorAnimation;*/
+    /*animation-duration: 5s;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-direction: alternate;*/
 }
 
 .welcome {
@@ -49,10 +67,17 @@ body {
 
 .page-header {
     background: var(--header-bg-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
     height: 60px;
     padding: 0 20px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .header-slogan {
@@ -106,8 +131,7 @@ body {
     flex-direction: column;
     padding: 20px;
     gap: var(--gap-size);
-    background: var(--main-bg-color);
-    margin: 32px auto;
+    margin: 20px auto;
     min-height: 90vh;
     box-sizing: border-box;
     width: 100%;
@@ -226,7 +250,6 @@ body {
     padding: 9px 10px;
     border: solid 3px var(--text-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: var(--header-bg-color);
     border-radius: 7px;
 }
 
@@ -259,5 +282,22 @@ li {
 
     .header-slogan {
         font-size: 12px;
+    }
+}
+
+
+/**
+    Animations
+ */
+
+@keyframes backgroundColorAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
     }
 }
