@@ -108,7 +108,7 @@ body{
     padding: 20px;
     gap: var(--gap-size);
     background: var(--main-bg-color);
-    margin: 32px auto;
+    margin: auto;
     min-height: 90vh;
     box-sizing: border-box;
     width: 100%;
@@ -191,6 +191,10 @@ body{
     color: var(--text-color);
 }
 
+.donation-box {
+  word-break: break-word;
+}
+
 .links-list{
     display: flex;
     flex-direction: column;
@@ -263,4 +267,17 @@ li {
     }
 }
 
+@media (max-width: 420px) {
+  .page-header {
+    height: 70px;
+  }
 
+  .header-wrapper{
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
