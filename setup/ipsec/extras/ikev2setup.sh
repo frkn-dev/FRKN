@@ -301,8 +301,8 @@ set_dns_servers() {
     dns_servers="$VPN_DNS_SRV1"
   else
     dns_server_1=8.8.8.8
-    dns_server_2=8.8.4.4
-    dns_servers="8.8.8.8 8.8.4.4"
+    dns_server_2=1.1.1.1
+    dns_servers="8.8.8.8 1.1.1.1"
   fi
 }
 
@@ -514,8 +514,8 @@ enter_custom_dns() {
     *)
       use_custom_dns=0
       dns_server_1=8.8.8.8
-      dns_server_2=8.8.4.4
-      dns_servers="8.8.8.8 8.8.4.4"
+      dns_server_2=1.1.1.1
+      dns_servers="8.8.8.8 1.1.1.1"
       ;;
   esac
   if [ "$use_custom_dns" = "1" ]; then
@@ -1074,7 +1074,6 @@ create_config_readme() {
     && [ "$use_defaults" = "1" ] && [ ! -t 1 ] && [ ! -f "$readme_file" ]; then
 cat > "$readme_file" <<'EOF'
 These IKEv2 client config files were created during IPsec VPN setup.
-To configure IKEv2 clients, see: https://vpnsetup.net/clients
 EOF
     if [ "$export_to_home_dir" = "1" ]; then
       chown "$SUDO_USER:$SUDO_USER" "$readme_file"
@@ -1085,7 +1084,7 @@ EOF
 
 add_ikev2_connection() {
   bigecho2 "Adding a new IKEv2 connection..."
-  XAUTH_POOL=${VPN_XAUTH_POOL:-'192.168.43.10-192.168.43.250'}
+  XAUTH_POOL=${VPN_XAUTH_POOL:-'10.1.0.10-10.1.255.250'}
   if ! grep -qs '^include /etc/ipsec\.d/\*\.conf$' "$IPSEC_CONF"; then
     echo >> "$IPSEC_CONF"
     echo 'include /etc/ipsec.d/*.conf' >> "$IPSEC_CONF"
@@ -1283,7 +1282,7 @@ check_ipsec_conf() {
 cat 1>&2 <<EOF
 Error: IKEv2 configuration section found in $IPSEC_CONF.
        This script cannot automatically remove IKEv2 from this server.
-       To manually remove IKEv2, see https://vpnsetup.net/ikev2
+   
 EOF
     abort_and_exit
   fi
