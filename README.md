@@ -1,6 +1,6 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-## Client Configuration Files 
+## Client Configuration Files
 **Windows:**
 
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
@@ -36,7 +36,10 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 To connect to the VPN: Right-click on the **``wireless/network``** icon in your system tray, open settings, go to the **``VPN``**, select the new entry, and click **``Connect``**.
 
 ### OS X (macOS)
-- In progress 
+1. Download the **``vpnclient.mobileconfig``** file to your device.
+2. Double-click it, you'll get a OS notification.
+3. Open **`` → System Preferences → Profiles``** and install the profile.
+4. Open **`` → System Preferences → Network``** and connect.
 
 ### iOS (iPhone/iPad)
 1. Download the **``vpnclient.mobileconfig``** file to your device.
@@ -48,8 +51,8 @@ To connect to the VPN: Right-click on the **``wireless/network``** icon in your 
 1. Download [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) from Google Play.
 2. Download **``vpnclient.sswan``** file to your device.
 3. Press the button in the top right corner > **``Import VPN profile``** > **``Choose the file``**.
-4. Choose the **``VPN certificate``**. 
+4. Choose the **``VPN certificate``**.
 5. Connect to the **``VPN``**.
 
 ### Linux
-- In progress 
+- In progress
