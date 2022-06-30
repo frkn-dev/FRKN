@@ -14,7 +14,7 @@ UPDATE: Currently we need only one configuration files, you don't need to manual
 **Windows:**
 
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**p12**](/client-conf/vpnclient.p12) / Server IP: 89.40.1.114
+- [**p12**](/client-conf/vpnclient.p12) / Server: lt.fuckrkn1.xyz
 
 **iOS:**
 - [**mobile**](/client-conf/vpnclient.mobileconfig)
