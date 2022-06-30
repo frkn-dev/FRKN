@@ -8,20 +8,20 @@ Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
 ## Sponsors 
 
 ## Client Configuration Files
+
+UPDATE: Currently we need only one configuration files, you don't need to manually choose server 
+
 **Windows:**
 
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**Server 1 p12**](/client-conf/vpnclient1.p12) / Server IP: 89.40.1.114
+- [**p12**](/client-conf/vpnclient.p12) / Server IP: 89.40.1.114
 
 **iOS:**
-- [**Server1 mobile**](/client-conf/vpnclient1.mobileconfig)
-- [**Server2 mobile**](/client-conf/vpnclient2.mobileconfig)
-- [**Server3 mobile**](/client-conf/vpnclient3.mobileconfig)
+- [**mobile**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**Server1 swan**](/client-conf/vpnclient1.sswan)
-- [**Server2 swan**](/client-conf/vpnclient2.sswan)
-- [**Server3 swan**](/client-conf/vpnclient3.sswan)
+- [**swan**](/client-conf/vpnclient.sswan)
+
 
 ## Installation
 
