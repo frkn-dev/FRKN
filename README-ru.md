@@ -1,19 +1,23 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
+## IPSec 
+
+Конфигурационные файлы основаны на этом [**репозитории**](https://github.com/hwdsl2/setup-ipsec-vpn.git)
+
 ## Файлы конфигурации
 
-UPD: В данный момент больше нет необходимости выбирать сервер вручную.
+_**UPD**_: В данный момент больше нет необходимости выбирать сервер вручную.
 
 **Windows:**
 
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [** p12**](/client-conf/vpnclient.p12) 
+- [**p12**](/client-conf/vpnclient.p12) **``Сервер``**: ``lt.fuckrkn1.xyz``
 
 **iOS:**
-- [** mobile**](/client-conf/vpnclient.mobileconfig)
+- [**mobile**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [** Sswan**](/client-conf/vpnclient.sswan)
+- [**Sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Установка
@@ -56,3 +60,5 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 
 ### Linux
 - В работе
+
+### Спонсоры
