@@ -20,7 +20,7 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 - [**mobile**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**swan**](/client-conf/vpnclient.sswan)
+- [**Sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Installation
