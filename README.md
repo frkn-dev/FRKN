@@ -20,7 +20,7 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 - [**mobile**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**swan**](/client-conf/vpnclient.sswan)
+- [**sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Installation
@@ -84,7 +84,7 @@ sudo yum install epel-release
 sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
 ```
 
-Next, securely transfer the generated `.p12` file from the VPN server to your Linux computer. After that, extract the CA certificate, client certificate and private key. Replace `vpnclient.p12` in the example below with the name of your `.p12` file.
+Next, securely transfer the generated `.p12` file from the repository to your Linux computer. After that, extract the CA certificate, client certificate and private key. Replace `vpnclient.p12` in the example below with the name of your `.p12` file.
 
 ```bash
 # Example: Extract CA certificate, client certificate and private key.
@@ -108,7 +108,7 @@ You can then set up and enable the VPN connection:
 1. Go to Settings -> Network -> VPN. Click the **+** button.
 1. Select **IPsec/IKEv2 (strongswan)**.
 1. Enter anything you like in the **Name** field.
-1. In the **Gateway (Server)** section, enter `Your VPN Server IP` (or DNS name) for the **Address**.
+1. In the **Gateway (Server)** section, enter `Your VPN Server IP` (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
 1. Select the `ikev2vpnca.cer` file for the **Certificate**.
 1. In the **Client** section, select **Certificate(/private key)** in the **Authentication** drop-down menu.
 1. Select **Certificate/private key** in the **Certificate** drop-down menu (if exists).
