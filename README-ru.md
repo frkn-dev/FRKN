@@ -7,7 +7,7 @@ UPD: В данный момент больше нет необходимости
 **Windows:**
 
 Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [** p12**](/client-conf/vpnclient.p12) 
+- [** p12**](/client-conf/vpnclient.p12) Адрес сервера: lt.fuckrkn1.xyz
 
 **iOS:**
 - [** mobile**](/client-conf/vpnclient.mobileconfig)
