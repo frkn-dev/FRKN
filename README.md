@@ -61,12 +61,22 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 3. Open **``Settings``** and **install** the profile.
 4. Go to **``Settings``** > **``VPN``** and connect.
 
+
+
+https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9843-cf46e10c9f4e.mov
+
+
+
 ### Android
 1. Download [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) from Google Play.
 2. Download **``vpnclient.sswan``** file to your device.
 3. Press the button in the top right corner > **``Import VPN profile``** > **``Choose the file``**.
 4. Choose the **``VPN certificate``**.
 5. Connect to the **``VPN``**.
+
+
+https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9699-c11864ca9852.mov
+
 
 ### Linux
 
