@@ -41,11 +41,19 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 3. Откройте **`` → System Preferences → Profiles``** и **``установите``** профиль.
 4. Откройте **`` → System Preferences → Network``** и подключайтесь.
 
+
+https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a614-67550b8b0b00.mov
+
+
 ### iOS (iPhone/iPad)
 1. Сохраните файл **``vpnclient.mobileconfig``** на ваше устройство.
 2. Переместите файл в папку **``iPhone``**.
 3. Зайдите в **``настройки``** и **``установите``** профиль.
 4. Зайдите в **``Настройки``** > **``VPN``** и подключайтесь.
+
+
+https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9843-cf46e10c9f4e.mov
+
 
 ### Android
 1. Загрузите [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) из **Google Play**.
@@ -53,6 +61,11 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 3. Нажмите на кнопку в верхнем-правом углу > **``Import VPN profile``** > **``Выберите файл``**.
 4. Выберите **``сертификат VPN``**.
 5. Подключайтесь к **``VPN``**.
+
+
+https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9699-c11864ca9852.mov
+
+
 
 ### Linux
 
