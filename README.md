@@ -42,6 +42,10 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 8. Press any key to finish script.
 To connect to the VPN: Right-click on the **``wireless/network``** icon in your system tray, open settings, go to the **``VPN``**, select the new entry, and click **``Connect``**.
 
+
+https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b6ee-a522fc04f598.mov
+
+
 ### OS X (macOS)
 
 1. Download the **``vpnclient.mobileconfig``** file to your device.
