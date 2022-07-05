@@ -29,20 +29,15 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
     background: linear-gradient(
-            90deg,
-            var(--main-bg-color-0),
-            var(--main-bg-color-50),
-            var(--main-bg-color-100)
+        90deg,
+        var(--main-bg-color-0),
+        var(--main-bg-color-50),
+        var(--main-bg-color-100)
     );
     background-size: 400% 400%;
     animation: backgroundColorAnimation 10s ease infinite;
     height: 100vh;
-    padding-top: 60px;
-
-    /*animation-name: backgroundColorAnimation;*/
-    /*animation-duration: 5s;*/
-    /*animation-iteration-count: infinite;*/
-    /*animation-direction: alternate;*/
+    padding-top: 60px
 }
 
 .welcome {
@@ -59,19 +54,13 @@ body {
     color: var(--text-color);
 }
 
-/*.container {*/
-/*  max-width: var(--page-max-width);*/
-/*  width: 100%;*/
-/*  margin-inline: auto;*/
-/*}*/
-
 .page-header {
     background: var(--header-bg-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
     height: 60px;
-    padding: 0 20px;
+    padding: 0 15px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -94,14 +83,21 @@ body {
     justify-content: start;
     justify-items: center;
     align-items: center;
-    gap: 3em;
-    max-width: var(--page-max-width);
     width: 100%;
+}
+
+.header-wrapper > * {
+    margin-right: 15px;
+}
+
+.header-wrapper > *:last-child {
+    margin-right: 0;
 }
 
 .logoImage {
     width: 57px;
     height: 40px;
+    padding-right: 15px;
 }
 
 .install-section {
@@ -115,7 +111,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
     cursor: pointer;
 }
 
@@ -125,13 +120,11 @@ body {
     color: var(--header-text-color);
 }
 
+.header-title-shorty {
+    display: none;
+}
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: var(--gap-size);
-    background: var(--main-bg-color);
     margin: auto;
     min-height: 90vh;
     box-sizing: border-box;
@@ -140,14 +133,12 @@ body {
     height: auto;
 }
 
-.footer {
-    background: var(--footer-bg-color);
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%;
-    text-align: left;
-    color: var(--header-text-color);
-    bottom: 0;
+.main-content > * {
+    margin-bottom: 15px;
+}
+
+.main-content > *:last-child {
+    margin-bottom: 0;
 }
 
 .ptero-img {
@@ -160,24 +151,12 @@ body {
 
 .page-footer {
     bottom: 0;
-    margin-top: 1em;
     background: var(--footer-bg-color);
     box-sizing: border-box;
     min-height: 60px;
-    padding: 12px 24px;
+    padding: 10px 15px;
     width: 100%;
     text-align: match-parent;
-}
-
-.footer-wrapper {
-    margin-inline: auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    max-width: var(--page-max-width);
-    width: 100%;
 }
 
 .card {
@@ -215,22 +194,26 @@ body {
 }
 
 .donation-box {
-  word-break: break-word;
+    word-break: break-word;
 }
 
 .links-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: start;
     width: 100%;
-    flex-wrap: wrap;
+}
+
+.links-list li {
+    margin-bottom: 15px;
+}
+
+.links-list a {
+    text-decoration: underline;
 }
 
 .two-columns-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: var(--gap-size);
+    background-color: var(--main-bg-color-0);
 }
 
 .main__links {
@@ -259,7 +242,7 @@ body {
 }
 
 .paddings {
-    padding: 2em;
+    padding: 15px;
 }
 
 .icon-twitter {
@@ -274,40 +257,59 @@ li {
     color: var(--text-color);
 }
 
-.header-wrapper{
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-/*.social-icon {*/
-/*    width: 16px;*/
-/*    height: 16px;*/
-/*}*/
-
 @media (max-width: 768px) {
     .two-columns-grid {
         grid-template-columns: 1fr;
-        gap: 3em;
     }
 
     .header-slogan {
         font-size: 12px;
     }
+
+    .links-list:first-child {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header-title {
+        font-weight: 600;
+        display: none;
+    }
+
+    .header-title-shorty {
+        display: block;
+    }
 }
 
 @media (max-width: 420px) {
-  .page-header {
-    height: 70px;
+    .welcome {
+        font-size: 26px;
+    }
+
+    .bold-text {
+        font-size: 18px;
+    }
+
+    .links-list li {
+        margin-bottom: 10px;
+    }
+
+    .header-slogan {
+        display: none;
+    }
+
+    .header-wrapper {
+        justify-content: space-between;
+    }
+
+    .header-wrapper .main__links {
+        margin-right: 0;
+    }
 }
 
 /**
     Animations
  */
-
 @keyframes backgroundColorAnimation {
     0% {
         background-position: 0 50%;
