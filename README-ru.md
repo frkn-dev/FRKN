@@ -10,11 +10,11 @@ UPD: В данный момент больше нет необходимости
 - [**p12**](/client-conf/vpnclient.p12)
 - Доменное имя сервера: lt.fuckrkn1.xyz
 
-**iOS:**
-- [**mobile**](/client-conf/vpnclient.mobileconfig)
+**iOS, MacOS:**
+- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**Sswan**](/client-conf/vpnclient.sswan)
+- [**vpnclient.sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Установка
