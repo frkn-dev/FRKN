@@ -6,8 +6,8 @@ UPD: В данный момент больше нет необходимости
 
 **Windows:**
 
-- [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**p12**](/client-conf/vpnclient.p12)
+- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](/client-conf/vpnclient.p12)
 - Доменное имя сервера: lt.fuckrkn1.xyz
 
 **iOS, MacOS:**

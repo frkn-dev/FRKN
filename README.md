@@ -13,8 +13,8 @@ UPDATE: Currently we need only one configuration files, you don't need to manual
 
 **Windows:**
 
-- [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**p12**](/client-conf/vpnclient.p12)
+- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](/client-conf/vpnclient.p12)
 - Server domain name: lt.fuckrkn1.xyz
 
 **iOS, MacOS:**
