@@ -13,14 +13,15 @@ UPDATE: Currently we need only one configuration files, you don't need to manual
 
 **Windows:**
 
-Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**p12**](/client-conf/vpnclient.p12) / Server: lt.fuckrkn1.xyz
+- [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**p12**](/client-conf/vpnclient.p12)
+- Server domain name: lt.fuckrkn1.xyz
 
-**iOS:**
-- [**mobile**](/client-conf/vpnclient.mobileconfig)
+**iOS, MacOS:**
+- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**sswan**](/client-conf/vpnclient.sswan)
+- [**vpnclient.sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Installation
@@ -32,12 +33,12 @@ Config import script: [**ikev2_config_import**](/client-conf/ikev2_config_import
 * [**Linux**](#linux)
 
 ### Windows 7, 8, 10 and 11
-1. Download the **``vpnclient.p12``** file to your device.
-2. Download **``config import script``** and put it in the same folder as p12 file.
-3. Right-click on the saved script, select **``Properties``**. Click on **``Unblock``** at the bottom, then click on **``OK``**.
-4. Right-click on the saved script, select **``Run as administrator``**.
+1. Download **``vpnclient.p12``** file to your device.
+2. Download **``ikev2_config_import.cmd``** file and put it in the same folder as vpnclient.p12 file.
+3. Right-click on the file ikev2_config_import.cmd, select **``Properties``**. Click on **``Unblock``** at the bottom, then click on **``OK``**.
+4. Right-click on the file ikev2_config_import.cmd, select **``Run as administrator``**.
 5. Choose the VPN client name (or just press Enter, it will choose the file's name)
-6. Enter IP of the server, you can find it in the [**here**](#client-configuration-files)
+6. Enter domain name of the server - lt.fuckrkn1.xyz
 7. Choose the VPN connection name (or just press Enter, script will choose default name)
 8. Press any key to finish script.
 To connect to the VPN: Right-click on the **``wireless/network``** icon in your system tray, open settings, go to the **``VPN``**, select the new entry, and click **``Connect``**.
