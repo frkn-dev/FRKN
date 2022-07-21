@@ -93,6 +93,10 @@ To configure your Linux computer to connect to IKEv2 as a VPN client, first inst
 sudo apt-get update
 sudo apt-get install network-manager-strongswan
 
+# Gentoo Linux
+sudo emerge --sync
+sudo emerge net-vpn/networkmanager-strongswan
+
 # Arch Linux
 sudo pacman -Syu  # upgrade all packages
 sudo pacman -S networkmanager-strongswan

@@ -84,6 +84,10 @@ https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9
 sudo apt-get update
 sudo apt-get install network-manager-strongswan
 
+# Gentoo Linux
+sudo emerge --sync
+sudo emerge net-vpn/networkmanager-strongswan
+
 # Arch Linux
 sudo pacman -Syu  # upgrade all packages
 sudo pacman -S networkmanager-strongswan
