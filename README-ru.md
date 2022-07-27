@@ -6,15 +6,15 @@ UPD: В данный момент больше нет необходимости
 
 **Windows:**
 
-- [**ikev2_config_import**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**p12**](/client-conf/vpnclient.p12)
+- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](/client-conf/vpnclient.p12)
 - Доменное имя сервера: lt.fuckrkn1.xyz
 
-**iOS:**
-- [**mobile**](/client-conf/vpnclient.mobileconfig)
+**iOS, MacOS:**
+- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
 
 **Android:**
-- [**Sswan**](/client-conf/vpnclient.sswan)
+- [**vpnclient.sswan**](/client-conf/vpnclient.sswan)
 
 
 ## Установка
