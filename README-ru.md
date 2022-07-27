@@ -1,21 +1,18 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-## Файлы конфигурации
+# [FuckRKN1](https://fuckrkn1.org): Cвободный VPN для свободных людей.
 
-UPD: В данный момент больше нет необходимости выбирать сервер вручную.
+Мы за свободу слова и против какой-либо цензуры.
+Делаем некомерческий VPN, не собирающий никаких данных.
 
-**Windows:**
+Сегодня свобода слова особенно уязвима, независимые СМИ запрещены, людям промывают мозги пропагандой, сервисы ВПН блокируют, выражать свою позицию и мнение опасно. Поэтому мы взялись за этот проект, он некоммерческий, и здесь не преследуется никакой выгоды. Мы за свободу слова и против какой-либо цензуры. Компания у нас небольшая, но у нас большой потенциал. Вы можете поддержать нас донатами или любым другим вкладом по улучшению сервиса. Даже заведение ишью в проекте сильно нам поможет.
 
-- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**vpnclient.p12**](/client-conf/vpnclient.p12)
-- Доменное имя сервера: lt.fuckrkn1.xyz
+## Спонсоры 
+Будь первым! ;)
 
-**iOS, MacOS:**
-- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+# IPSec 
 
-**Android:**
-- [**vpnclient.sswan**](/client-conf/vpnclient.sswan)
-
+Файлы конфигурации основаны на https://github.com/hwdsl2/setup-ipsec-vpn.git
 
 ## Установка
 
@@ -26,6 +23,13 @@ UPD: В данный момент больше нет необходимости
 * [**Linux**](#linux)
 
 ### Windows 7, 8, 10 and 11
+
+**Файлы конфигурации:**
+- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](/client-conf/vpnclient.p12)
+
+**NOTE: Доменное имя сервера: lt.fuckrkn1.xyz**
+
 1. Сохраните файл **``vpnclient.p12``** на ваше устройство.
 2. Сохраните файл **``ikev2_config_import.cmd``** в ту же папку, что и файл vpnclient.p12.
 3. Нажмите правой кнопкой мыши на файл **``ikev2_config_import.cmd``**, выберите **``Свойства``**. Поставьте галочку **``Разблокировать``** и нажмите ОК.
@@ -42,6 +46,10 @@ https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b
 
 
 ### OS X (macOS)
+
+**Файл конфигурации:**
+ [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+
 1. Сохраните файл **``vpnclient.mobileconfig``**.
 2. Откройте его двойным щелчком, появится уведомление.
 3. Откройте **`` → System Preferences → Profiles``** и **``установите``** профиль.
@@ -52,6 +60,10 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 
 
 ### iOS (iPhone/iPad)
+
+**Файл конфигурации:**
+ [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+
 1. Сохраните файл **``vpnclient.mobileconfig``** на ваше устройство.
 2. Переместите файл в папку **``iPhone``**.
 3. Зайдите в **``настройки``** и **``установите``** профиль.
@@ -62,6 +74,10 @@ https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9
 
 
 ### Android
+
+**Файл конфигурации:** 
+[**vpnclient.sswan**](/client-conf/vpnclient.sswan)
+
 1. Загрузите [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) из **Google Play**.
 2. Сохраните файл **``vpnclient.sswan``** на ваше устройство.
 3. Нажмите на кнопку в верхнем-правом углу > **``Import VPN profile``** > **``Выберите файл``**.
@@ -74,6 +90,8 @@ https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9
 
 
 ### Linux
+
+**Удачи!**
 
 Через Network Manager:
 

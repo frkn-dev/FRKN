@@ -1,28 +1,21 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-## IPSec 
+# FuckRKN1: Free VPN for free humans
 
-Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
+We are for freedom of speech and against any kind of censorship.
 
+We are making a non-commercial VPN-service that does not collect any data.
+
+Today, freedom of speech is especially vulnerable. Independent media are banned, people are brainwashed with propaganda, VPN services are blocked, and it is dangerous to express one's position and opinion. This is the reason why we took on this project. It is non-commercial, no profit is pursued either. We are rather small, but yet, we have a great potential.
+
+You can support us with donations or any other contribution to improve the service. Pulling requests and creating issues also helps us a lot.
 
 ## Sponsors 
+Be first! ;)
 
-## Client Configuration Files
+# IPSec 
 
-UPDATE: Currently we need only one configuration files, you don't need to manually choose server 
-
-**Windows:**
-
-- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**vpnclient.p12**](/client-conf/vpnclient.p12)
-- Server domain name: lt.fuckrkn1.xyz
-
-**iOS, MacOS:**
-- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
-
-**Android:**
-- [**vpnclient.sswan**](/client-conf/vpnclient.sswan)
-
+Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
 
 ## Installation
 
@@ -33,6 +26,14 @@ UPDATE: Currently we need only one configuration files, you don't need to manual
 * [**Linux**](#linux)
 
 ### Windows 7, 8, 10 and 11
+
+**Configuration files:**
+
+- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](/client-conf/vpnclient.p12)
+
+**NOTE: Server domain name: lt.fuckrkn1.xyz**
+
 1. Download **``vpnclient.p12``** file to your device.
 2. Download **``ikev2_config_import.cmd``** file and put it in the same folder as vpnclient.p12 file.
 3. Right-click on the file ikev2_config_import.cmd, select **``Properties``**. Click on **``Unblock``** at the bottom, then click on **``OK``**.
@@ -49,6 +50,10 @@ https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b
 
 ### OS X (macOS)
 
+**Configuration file:**
+[**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+
+
 1. Download the **``vpnclient.mobileconfig``** file to your device.
 2. Double-click it, you'll get a OS notification.
 3. Open **`` → System Preferences → Profiles``** and install the profile.
@@ -59,8 +64,11 @@ https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b
 https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a614-67550b8b0b00.mov
 
 
-
 ### iOS (iPhone/iPad)
+
+**Configuration file:**
+[**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+
 1. Download the **``vpnclient.mobileconfig``** file to your device.
 2. Move the file to the "On my iPhone" folder.
 3. Open **``Settings``** and **install** the profile.
@@ -73,6 +81,10 @@ https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9
 
 
 ### Android
+
+**Configuration file:**
+[**vpnclient.sswan**](/client-conf/vpnclient.sswan)
+
 1. Download [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) from Google Play.
 2. Download **``vpnclient.sswan``** file to your device.
 3. Press the button in the top right corner > **``Import VPN profile``** > **``Choose the file``**.
@@ -84,6 +96,8 @@ https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9
 
 
 ### Linux
+
+**Good luck with it!**
 
 Via Network Manager
 
