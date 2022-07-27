@@ -1,6 +1,6 @@
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-# FuckRKN1: Free VPN for free humans
+# [FuckRKN1](https://fuckrkn1.org/index-en.html): Free VPN for free humans
 
 We are for freedom of speech and against any kind of censorship.
 
