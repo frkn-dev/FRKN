@@ -1015,7 +1015,11 @@ cat > "$sswan_file" <<EOF
     "rsa-pss": "true"
   },
   "ike-proposal": "aes256-sha256-modp2048",
-  "esp-proposal": "aes128gcm16"
+  "esp-proposal": "aes128gcm16",
+  "split-tunneling": {
+    "block-ipv4": true,
+    "block-ipv6": true
+  }
 }
 EOF
   if [ "$export_to_home_dir" = "1" ]; then
