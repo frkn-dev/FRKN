@@ -11,7 +11,7 @@ Today, freedom of speech is especially vulnerable. Independent media are banned,
 You can support us with donations or any other contribution to improve the service. Pulling requests and creating issues also helps us a lot.
 
 ## Sponsors 
-Be first! ;)
+Be the first! ;)
 
 # IPSec 
 
@@ -24,6 +24,7 @@ Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
 * [**iOS (iPhone/iPad)**](#ios-iphoneipad)
 * [**Android**](#android)
 * [**Linux**](#linux)
+* [**Oculus**](#oculus-vr)
 
 ### Windows 7, 8, 10 and 11
 
@@ -146,17 +147,40 @@ sudo chmod 600 ikev2vpnca.cer vpnclient.cer vpnclient.key
 You can then set up and enable the VPN connection:
 
 1. Go to Settings -> Network -> VPN. Click the **+** button.
-1. Select **IPsec/IKEv2 (strongswan)**.
-1. Enter anything you like in the **Name** field.
-1. In the **Gateway (Server)** section, enter `Your VPN Server IP` (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
-1. Select the `ikev2vpnca.cer` file for the **Certificate**.
-1. In the **Client** section, select **Certificate(/private key)** in the **Authentication** drop-down menu.
-1. Select **Certificate/private key** in the **Certificate** drop-down menu (if exists).
-1. Select the `vpnclient.cer` file for the **Certificate (file)**.
-1. Select the `vpnclient.key` file for the **Private key**.
-1. In the **Options** section, check the **Request an inner IP address** checkbox.
-1. In the **Cipher proposals (Algorithms)** section, check the **Enable custom proposals** checkbox.
-1. Leave the **IKE** field blank.
-1. Enter `aes128gcm16` in the **ESP** field.
-1. Click **Add** to save the VPN connection information.
-1. Turn the **VPN** switch ON.
+2. Select **IPsec/IKEv2 (strongswan)**.
+3. Enter anything you like in the **Name** field.
+4. In the **Gateway (Server)** section, enter `Your VPN Server IP` (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
+5. Select the `ikev2vpnca.cer` file for the **Certificate**.
+6. In the **Client** section, select **Certificate(/private key)** in the **Authentication** drop-down menu.
+7. Select **Certificate/private key** in the **Certificate** drop-down menu (if exists).
+8. Select the `vpnclient.cer` file for the **Certificate (file)**.
+9. Select the `vpnclient.key` file for the **Private key**.
+10. In the **Options** section, check the **Request an inner IP address** checkbox.
+11. In the **Cipher proposals (Algorithms)** section, check the **Enable custom proposals** checkbox.
+12. Leave the **IKE** field blank.
+13. Enter `aes128gcm16` in the **ESP** field.
+14. Click **Add** to save the VPN connection information.
+15. Turn the **VPN** switch ON.
+
+### Oculus VR
+
+1. In order to install applications, you need to activate developer mode on oq2 (see activation guide
+   [**here**](https://developer.oculus.com/documentation/native/android/mobile-device-setup/)). After this step you can install third-party applications (i.e. sideloading). Then you need to transfer
+   `vpnclient.sswan` to your device (the process of installation is the same as on Android). This can be done via internal
+   browser or by using `adb`. Download the file to your PC, then push it to the device:
+   `adb push vpnclient.sswan /sdcard/`
+
+3. The next step is strong swan installation. Download `apk`
+   from [**here**](https://download.strongswan.org/Android/) and install it with the
+   next command: `adb install -g -r strongSwan-2.3.3.apk`
+
+Unfortunately, the built-in file manager is quite truncated, so when you click on `import vpn profile` nothing will
+happen (that’s why strong swan is installed via `adb`). Therefore, a couple of additional steps need to be taken.
+
+4. Download any decent file manager (I personally use
+   [**Mixplorer**](https://4pda.to/forum/index.php?showtopic=318294)) and
+   install it with the command:
+   `adb install -g -r mixplorer.apk`
+
+5. Put on your VR headset and repeat the remaining steps as when installing on android (see [**above**](#android)). Now when you click
+   on `import VPN profile` Mixplorer will be used to navigate and select a file.
