@@ -174,7 +174,7 @@ You can then set up and enable the VPN connection:
    from [**here**](https://download.strongswan.org/Android/) and install it with the
    next command: `adb install -g -r strongSwan-2.3.3.apk`
 
-Unfortunately, the built-in file manager is quite truncated, so when you click on "import vpn profile" nothing will
+Unfortunately, the built-in file manager is quite truncated, so when you click on `import vpn profile` nothing will
 happen (that’s why strong swan is installed via `adb`). Therefore, a couple of additional steps need to be taken.
 
 4. Download any decent file manager (I personally use
