@@ -1,8 +1,12 @@
+<p align="center">
+  <img src="./logofckrkn.jpg" width="350" title="FuckRKN1">
+</p>
+
 [**English**](README.md) | [**Русский**](README-ru.md)
 
 # [FuckRKN1](https://fuckrkn1.org): Cвободный VPN для свободных людей.
 
-Мы за свободу слова и против какой-либо цензуры.
+**Мы** за свободу слова и против какой-либо цензуры.
 Делаем некомерческий VPN, не собирающий никаких данных.
 
 Сегодня свобода слова особенно уязвима, независимые СМИ запрещены, людям промывают мозги пропагандой, сервисы ВПН блокируют, выражать свою позицию и мнение опасно. Поэтому мы взялись за этот проект, он некоммерческий, и здесь не преследуется никакой выгоды. Мы за свободу слова и против какой-либо цензуры. Компания у нас небольшая, но у нас большой потенциал. Вы можете поддержать нас донатами или любым другим вкладом по улучшению сервиса. Даже заведение ишью в проекте сильно нам поможет.
@@ -12,7 +16,7 @@
 
 # IPSec 
 
-Файлы конфигурации основаны на https://github.com/hwdsl2/setup-ipsec-vpn.git
+Файлы конфигурации основаны на этом [**репозитории**](https://github.com/hwdsl2/setup-ipsec-vpn.git)
 
 ## Установка
 
@@ -29,14 +33,14 @@
 - [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
 - [**vpnclient.p12**](/client-conf/vpnclient.p12)
 
-**NOTE: Доменное имя сервера: lt.fuckrkn1.xyz**
+**NOTE: Доменное имя сервера: ``lt.fuckrkn1.xyz``**
 
 1. Сохраните файл **``vpnclient.p12``** на ваше устройство.
 2. Сохраните файл **``ikev2_config_import.cmd``** в ту же папку, что и файл vpnclient.p12.
 3. Нажмите правой кнопкой мыши на файл **``ikev2_config_import.cmd``**, выберите **``Свойства``**. Поставьте галочку **``Разблокировать``** и нажмите ОК.
 4. Нажмите правой кнопкой мыши на файл **``ikev2_config_import.cmd``**, выберите **``Запустить от имени администратора``**. После этого откроется окно терминала.
 5. Введите имя VPN клиента (или нажмите Enter, скрипт самостоятельно выберет имя файла).
-6. Введите доменное имя сервера - lt.fuckrkn1.xyz
+6. Введите доменное имя сервера - **``lt.fuckrkn1.xyz``**
 7. Введите имя для VPN подключения (или нажмите Enter, установится стандартное имя).
 8. Нажмите любую кнопку для завершения скрипта.
 Для подключения к VPN: Нажмите на иконку **``Сеть``** в трее вашей системы правой кнопкой мыши, откройте **``Параметры сети и Интернет``**, зайдите в **``VPN``** и подключайтесь к новому профилю.
@@ -98,23 +102,31 @@ https://user-images.githubusercontent.com/6414316/177091268-3815ebb3-fd10-42e6-9
 
 Чтобы настроить подключение через IKEv2 VPN клиент на вашем Linux компьютере, сначала установите strongSwan плагин для NetworkManager:
 
+###### Ubuntu and Debian
 ```bash
-# Ubuntu и Debian
 sudo apt-get update
 sudo apt-get install network-manager-strongswan
+```
 
-# Gentoo Linux
+###### Gentoo Linux
+```bash
 sudo emerge --sync
 sudo emerge net-vpn/networkmanager-strongswan
+```
 
-# Arch Linux
+###### Arch Linux
+```bash
 sudo pacman -Syu  # upgrade all packages
 sudo pacman -S networkmanager-strongswan
+```
 
-# Fedora
+###### Fedora
+```bash
 sudo yum install NetworkManager-strongswan-gnome
+```
 
-# CentOS
+###### CentOS
+```bash
 sudo yum install epel-release
 sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
 ```
