@@ -1,10 +1,14 @@
+<p align="center">
+  <img src="./media/logofckrkn.jpg" width="350" title="FuckRKN1">
+</p>
+
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-# [FuckRKN1](https://fuckrkn1.org/index-en.html): Free VPN for free humans
+# [FuckRKN1](https://fuckrkn1.org/#ru): Free VPN for free humans
 
-We are for freedom of speech and against any kind of censorship.
+**We** are for freedom of speech and against any kind of censorship.
 
-We are making a non-commercial VPN-service that does not collect any data.
+**We** are making a non-commercial VPN-service that does not collect any data.
 
 Today, freedom of speech is especially vulnerable. Independent media are banned, people are brainwashed with propaganda, VPN services are blocked, and it is dangerous to express one's position and opinion. This is the reason why we took on this project. It is non-commercial, no profit is pursued either. We are rather small, but yet, we have a great potential.
 
@@ -15,7 +19,7 @@ Be the first! ;)
 
 # IPSec 
 
-Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
+Configuration files are based on this [**reporsitory**](https://github.com/hwdsl2/setup-ipsec-vpn.git)
 
 ## Installation
 
@@ -33,14 +37,14 @@ Configuration files are based on https://github.com/hwdsl2/setup-ipsec-vpn.git
 - [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
 - [**vpnclient.p12**](/client-conf/vpnclient.p12)
 
-**NOTE: Server domain name: lt.fuckrkn1.xyz**
+**NOTE: Server domain name: ``lt.fuckrkn1.xyz``**
 
 1. Download **``vpnclient.p12``** file to your device.
 2. Download **``ikev2_config_import.cmd``** file and put it in the same folder as vpnclient.p12 file.
 3. Right-click on the file ikev2_config_import.cmd, select **``Properties``**. Click on **``Unblock``** at the bottom, then click on **``OK``**.
 4. Right-click on the file ikev2_config_import.cmd, select **``Run as administrator``**.
 5. Choose the VPN client name (or just press Enter, it will choose the file's name)
-6. Enter domain name of the server - lt.fuckrkn1.xyz
+6. Enter domain name of the server - **``lt.fuckrkn1.xyz``**
 7. Choose the VPN connection name (or just press Enter, script will choose default name)
 8. Press any key to finish script.
 To connect to the VPN: Right-click on the **``wireless/network``** icon in your system tray, open settings, go to the **``VPN``**, select the new entry, and click **``Connect``**.
@@ -71,7 +75,7 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
 
 1. Download the **``vpnclient.mobileconfig``** file to your device.
-2. Move the file to the "On my iPhone" folder.
+2. Move the file to the ``On my iPhone" folder``.
 3. Open **``Settings``** and **install** the profile.
 4. Go to **``Settings``** > **``VPN``** and connect.
 
@@ -104,23 +108,31 @@ Via Network Manager
 
 To configure your Linux computer to connect to IKEv2 as a VPN client, first install the strongSwan plugin for NetworkManager:
 
+###### Ubuntu and Debian
 ```bash
-# Ubuntu and Debian
 sudo apt-get update
 sudo apt-get install network-manager-strongswan
+```
 
-# Gentoo Linux
+###### Gentoo Linux
+```bash
 sudo emerge --sync
 sudo emerge net-vpn/networkmanager-strongswan
+```
 
-# Arch Linux
+###### Arch Linux
+```bash
 sudo pacman -Syu  # upgrade all packages
 sudo pacman -S networkmanager-strongswan
+```
 
-# Fedora
+###### Fedora
+```bash
 sudo yum install NetworkManager-strongswan-gnome
+```
 
-# CentOS
+###### CentOS
+```bash
 sudo yum install epel-release
 sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
 ```
