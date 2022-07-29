@@ -34,8 +34,8 @@ Configuration files are based on this [**reporsitory**](https://github.com/hwdsl
 
 **Configuration files:**
 
-- [**ikev2_config_import.cmd**](http://s.fuckrkn1.xyz/client-conf/0.0.2/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**vpnclient.p12**](http://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12)
+- [**ikev2_config_import.cmd**](https://s.fuckrkn1.xyz/client-conf/0.0.2/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12)
 
 **NOTE: Server domain name: ``lt.fuckrkn1.xyz``**
 
@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b
 ### OS X (macOS)
 
 **Configuration file:**
-[**vpnclient.mobileconfig**](http://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+[**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
 
 
 1. Download the **``vpnclient.mobileconfig``** file to your device.
@@ -72,7 +72,7 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 ### iOS (iPhone/iPad)
 
 **Configuration file:**
-[**vpnclient.mobileconfig**](http://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+[**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
 
 1. Download the **``vpnclient.mobileconfig``** file to your device.
 2. Move the file to the ``On my iPhone" folder``.
@@ -88,7 +88,7 @@ https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9
 ### Android
 
 **Configuration file:**
-[**vpnclient.sswan**](http://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.sswan)
+[**vpnclient.sswan**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.sswan)
 
 1. Download [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) from Google Play.
 2. Download **``vpnclient.sswan``** file to your device.
