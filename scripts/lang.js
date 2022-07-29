@@ -31,9 +31,16 @@ const langArr = {
         'ru' : 'Мы open source проект. Вы можете нас поддержать',
         'en' : 'We are OpenSource. You can support us.',
     },
+    'donation2' : {
+        'ru' : 'Больше способов',
+        'en' : 'More options'
+    },
     'contacts' : {
         'ru' : 'Обратная связь - ',
         'en' : 'Contacts - ',
     },
-    
+    'back-to-main-page' : {
+        'ru' : 'Обратно на главную',
+        'en' : 'Back to main page'
+    }
 }
