@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logofckrkn.jpg" width="350" title="FuckRKN1">
+  <img src="./media/logofckrkn.jpg" width="350" title="FuckRKN1">
 </p>
 
 [**English**](README.md) | [**Русский**](README-ru.md)
