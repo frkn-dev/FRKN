@@ -10,7 +10,12 @@ credits.forEach(credit => {
     credit.appendChild(tooltip);
 
     credit.addEventListener('click', (e) => {
-        const text = e.target.innerText;
+        
+        tooltip.innerText = "";
+        const text = e.target.textContent;
+        console.log("TEXT:", text);
+        console.log(e);
+        console.log(tooltip);
         const toolTips = document.querySelectorAll('.copy-credits-tooltip');
 
         toolTips.forEach(item => {
