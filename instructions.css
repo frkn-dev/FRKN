@@ -1,29 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 * {
-  -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-  margin: 0 auto;
-  padding: 0;
-  height: 100%;
-  color: #000;
-  background: #fafafa;
-  font-family: "Inter", Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.45em;
-  min-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    color: #000;
+    background: #fafafa;
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.45em;
+    min-width: 320px;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -37,198 +38,198 @@ ul,
 ol,
 blockquote,
 hr {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 ul,
 ol {
-  padding: 10px 0 10px 40px;
+    padding: 10px 0 10px 40px;
 }
 
 h2 {
-  font-size: 20px;
-  font-weight: 800;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  outline: none;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
 }
 
 a:visited {
-  color: #7f788e;
+    color: #7f788e;
 }
 
 a:hover {
-  opacity: 0.5;
-  transition: 0.3s, ease-in-out, linear;
-  cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s, ease-in-out, linear;
+    cursor: pointer;
 }
 
 nav h3,
 article h3 {
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 600;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 article h4 {
-  padding: 10px 0;
-  font-size: 16px;
-  font-weight: bold;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 nav a,
 article a {
-  text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 
 article video {
-  height: auto;
-  width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 p {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 code {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .code-scroll-box {
-  margin: 1rem 0 1rem;
-  display: block;
-  background: #efefef;
-  width: 100%;
-  max-width: 1024px;
-  white-space: pre;
-  font-size: 14px;
-  line-height: 1.55;
-  padding: 1rem 2.5rem 1rem 1rem;
-  border-radius: 12px;
-  overflow-x: scroll;
+    margin: 1rem 0 1rem;
+    display: block;
+    background: #efefef;
+    width: 100%;
+    max-width: 1024px;
+    white-space: pre;
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 1rem 2.5rem 1rem 1rem;
+    border-radius: 12px;
+    overflow-x: scroll;
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 1.421rem;
-  background: #fafafa;
-  margin: auto;
-  min-height: 90vh;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1024px;
-  height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1.421rem;
+    background: #fafafa;
+    margin: auto;
+    min-height: 90vh;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
 }
 
 .page-header {
-  background: #0a0a0a;
-  padding: 0 20px;
-  width: 100%;
+    background: #0a0a0a;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .header-wrapper {
-  margin-inline: auto;
-  min-height: 60px;
-  display: flex;
-  justify-content: start;
-  justify-items: center;
-  align-items: center;
-  gap: 3em;
-  max-width: 1024px;
-  width: 100%;
+    margin-inline: auto;
+    min-height: 60px;
+    display: flex;
+    justify-content: start;
+    justify-items: center;
+    align-items: center;
+    gap: 3em;
+    max-width: 1024px;
+    width: 100%;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    cursor: pointer;
 }
 
 .logoImage {
-  width: 57px;
-  height: 40px;
+    width: 57px;
+    height: 40px;
 }
 
 .header-title {
-  font-size: 20px;
-  font-weight: 800;
-  color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
 }
 
 .header-slogan {
-  font-size: 14px;
-  line-height: 1.3;
-  font-weight: 500;
-  color: #808080;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #808080;
 }
 
 .page-footer {
-  bottom: 0;
-  margin-top: 1em;
-  background: #000;
-  box-sizing: border-box;
-  min-height: 60px;
-  padding: 12px 24px;
-  width: 100%;
-  text-align: match-parent;
+    bottom: 0;
+    margin-top: 1em;
+    background: #000;
+    box-sizing: border-box;
+    min-height: 60px;
+    padding: 12px 24px;
+    width: 100%;
+    text-align: match-parent;
 }
 
 .footer-wrapper {
-  margin-inline: auto;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-  max-width: 1024px;
-  width: 100%;
+    margin-inline: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
 }
 
 .footer-content {
-  height: auto;
-  color: #fff;
-  display: contents;
-  flex-direction: column;
-  align-items: normal;
-  justify-content: left;
-  margin-inline: auto;
+    height: auto;
+    color: #fff;
+    display: contents;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: left;
+    margin-inline: auto;
 }
 
 .white-text {
-  color: #fff;
+    color: #fff;
 }
 
 .main__links {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ef5018;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ef5018;
 }
 
 @media (max-width: 768px) {
-  .header-title {
-    font-size: 1em;
-    text-align: center;
-  }
+    .header-title {
+        font-size: 1em;
+        text-align: center;
+    }
 
-  .header-slogan {
-    font-size: 12px;
-  }
+    .header-slogan {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 450px) {
-  .header-wrapper {
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+    .header-wrapper {
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }
