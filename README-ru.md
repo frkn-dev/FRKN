@@ -30,8 +30,8 @@
 ### Windows 7, 8, 10 and 11
 
 **Файлы конфигурации:**
-- [**ikev2_config_import.cmd**](/client-conf/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**vpnclient.p12**](/client-conf/vpnclient.p12)
+- [**ikev2_config_import.cmd**](https://s.fuckrkn1.xyz/client-conf/0.0.2/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
+- [**vpnclient.p12**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12)
 
 **NOTE: Доменное имя сервера: ``lt.fuckrkn1.xyz``**
 
@@ -53,7 +53,7 @@ https://user-images.githubusercontent.com/6414316/177270570-ef6c8eb7-363c-4586-b
 ### OS X (macOS)
 
 **Файл конфигурации:**
- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+ [**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
 
 1. Сохраните файл **``vpnclient.mobileconfig``**.
 2. Откройте его двойным щелчком, появится уведомление.
@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 ### iOS (iPhone/iPad)
 
 **Файл конфигурации:**
- [**vpnclient.mobileconfig**](/client-conf/vpnclient.mobileconfig)
+ [**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
 
 1. Сохраните файл **``vpnclient.mobileconfig``** на ваше устройство.
 2. Переместите файл в папку **``iPhone``**.
@@ -81,7 +81,7 @@ https://user-images.githubusercontent.com/6414316/177091471-f2ef1a2e-0c63-41b0-9
 ### Android
 
 **Файл конфигурации:** 
-[**vpnclient.sswan**](/client-conf/vpnclient.sswan)
+[**vpnclient.sswan**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.sswan)
 
 1. Загрузите [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) из **Google Play**.
 2. Сохраните файл **``vpnclient.sswan``** на ваше устройство.
