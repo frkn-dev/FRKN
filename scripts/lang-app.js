@@ -29,6 +29,7 @@ function changeLanguage() {
     for (let key in langArr) {
         let elem = document.querySelector('.lng-'+ key);
         if (elem) {
+            changeInstallLinkHref(elem, hash);
             elem.textContent = langArr[key][hash];
         }
     }
@@ -70,8 +71,18 @@ function getLocalLang() {
         for (let key in langArr) {
             let elem = document.querySelector('.lng-'+ key);
             if (elem) {
+                changeInstallLinkHref(elem, hash);
                 elem.textContent = langArr[key][hash];
             }
         }
     });
+}
+
+function changeInstallLinkHref(elem, hash) {
+    if (elem.classList.contains('lng-link-install')) {
+        hash === "ru"
+            ? (elem.href = 'instructions-ru.html')
+            : (elem.href = 'instructions-en.html');
+    }
+    return;
 }
