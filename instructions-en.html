@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FuckRKN1 VPN: Freedom of speech</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="https://FuckRKN1.org" />
+    <meta property="og:url" content="https://FuckRKN1.org" />
+    <meta property="og:site_name" content="FuckRKN1 VPN: Freedom of speech" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="FuckRKN1 VPN: freedom of speech" />
+    <meta property="twitter:image" content="/Images/icon512x512.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FuckRKN1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#157878" />
+    <link rel="stylesheet" href="instructions.css" />
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="header-wrapper">
+            <section class="logoContainer">
+                <a class="logo" href="https://FuckRKN1.org">
+                    <img class="logoImage" src="Images/TransparentWhiteLogo.png" alt="FuckRKN1" />
+                    <h1 class="header-title">FuckRKN1: Freedom of speech</h1>
+                </a>
+            </section>
+            <a class="main__links white-text" href="instructions-ru.html">Русский</a>
+            <h5 class="header-slogan">Roskomnadzor, go fuck yourself!</h5>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-content">
+            <h2>Installation</h2>
+
+            <nav>
+                <h3>Platforms</h3>
+                <ul>
+                    <li>
+                        <a href="#windows">Windows 7, 8, 10 and 11</a>
+                    </li>
+                    <li>
+                        <a href="#macos">macOS</a>
+                    </li>
+                    <li>
+                        <a href="#ios">iOS (iPhone/iPad)</a>
+                    </li>
+                    <li>
+                        <a href="#android">Android</a>
+                    </li>
+                    <li>
+                        <a href="#linux">Linux</a>
+                    </li>
+                    <li>
+                        <a href="#oculus">Oculus</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article id="windows">
+                <h3>Windows 7, 8, 10 and 11</h3>
+                <h4>Configuration files</h4>
+                <ul>
+                    <li>
+                        <a href="./client-conf/ikev2_config_import.cmd"
+                            download="ikev2_config_import.cmd">ikev2_config_import.cmd</a>
+                    </li>
+                    <li>
+                        <a href="./client-conf/vpnclient.p12" download="vpnclient.p12">vpnclient.p12</a>
+                    </li>
+                </ul>
+
+                <p><mark>NOTE: Server domain name: lt.fuckrkn1.xyz</mark></p>
+
+                <h4>Instructions</h4>
+                <ol>
+                    <li>Download <b>vpnclient.p12</b> file to your device.</li>
+                    <li>
+                        Download <b>ikev2_config_import.cmd</b> file and put it in the same folder as
+                        <b>vpnclient.p12</b> file.
+                    </li>
+                    <li>
+                        Right-click on the file <b>ikev2_config_import.cmd</b>, select <b>Properties</b>. Click on
+                        <b>Unblock</b> at the
+                        bottom, then click on <b>OK</b>.
+                    </li>
+                    <li>
+                        Right-click on the file <b>ikev2_config_import.cmd</b>, select <b>Run as administrator</b>.
+                        After these steps, a terminal window will open.
+                    </li>
+                    <li>
+                        Choose the VPN client name (or just press <b>Enter</b>, it will choose the file's name)
+                    </li>
+                    <li>Enter domain name of the server - <b>lt.fuckrkn1.xyz</b></li>
+                    <li>
+                        Choose the VPN connection name (or just press <b>Enter</b>, script will choose default name)
+                    </li>
+                    <li>
+                        Press any key to finish script. To connect to the VPN: Right-click on the
+                        <b>wireless/network</b> icon
+                        in your system tray, open settings, go to the <b>VPN</b>, select the new entry, and click
+                        <b>Connect</b>.
+                    </li>
+                </ol>
+
+                <h4>Screencast</h4>
+                <video controls preload="metadata">
+                    <source src="./media/video/screencasts/windows-screencast.h264.mp4"
+                        type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" />
+                    <p>
+                        Your browser does not support HTML5 videos. Try downloading the video from
+                        <a href="./media/video/screencasts/windows-screencast.h264.mp4">this link</a>
+                    </p>
+                </video>
+            </article>
+
+            <article id="macos">
+                <h3>macOS</h3>
+
+                <h4>Configuration files</h4>
+                <ul>
+                    <li>
+                        <a href="./client-conf/vpnclient.mobileconfig"
+                            download="vpnclient.mobileconfig">vpnclient.mobileconfig</a>
+                    </li>
+                </ul>
+
+                <h4>Instructions</h4>
+                <ol>
+                    <li>
+                        Download the <b>vpnclient.mobileconfig</b> file to your device.
+                    </li>
+                    <li>Double-click it, you'll get a OS notification.</li>
+                    <li>
+                        Open <b> → System Preferences → Profiles</b> and install the profile.
+                    </li>
+                    <li>
+                        Open <b> → System Preferences → Network</b> and connect.
+                    </li>
+                </ol>
+
+                <h4>Screencast</h4>
+                <video controls preload="metadata">
+                    <source src="./media/video/screencasts/macos-screencast.h264.mp4"
+                        type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" />
+                    <p>
+                        Your browser does not support HTML5 videos. Try downloading the video from
+                        <a href="./media/video/screencasts/macos-screencast.h264.mp4">this link</a>
+                    </p>
+                </video>
+            </article>
+
+            <article id="ios">
+                <h3>iOS (iPhone/iPad)</h3>
+
+                <h4>Configuration files:</h4>
+                <ul>
+                    <li>
+                        <a href="./client-conf/vpnclient.mobileconfig"
+                            download="vpnclient.mobileconfig">vpnclient.mobileconfig</a>
+                    </li>
+                </ul>
+
+                <h4>Instructions</h4>
+                <ol>
+                    <li>
+                        Download the <b>vpnclient.mobileconfig</b> file to your device.
+                    </li>
+                    <li>Переместите файл в папку <b>iPhone.</b>
+                        Move the file to the <b>On my iPhone</b> folder</li>
+                    <li>Open <b>Settings</b> and <b>install</b> the profile.</li>
+                    <li>Go to <b>Settings</b> > <b>VPN</b> and connect.</li>
+                </ol>
+
+                <h4>Screencast</h4>
+                <video controls preload="metadata">
+                    <source src="./media/video/screencasts/ios-screencast.h264.mp4"
+                        type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" />
+                    <p>
+                        Your browser does not support HTML5 videos. Try downloading the video from
+                        <a href="./media/video/screencasts/ios-screencast.h264.mp4">this link</a>
+                    </p>
+                </video>
+            </article>
+
+            <article id="android">
+                <h3>Android</h3>
+
+                <h4>Configuration files</h4>
+                <ul>
+                    <li>
+                        <a href="./client-conf/vpnclient.sswan" download="vpnclient.sswan">vpnclient.sswan</a>
+                    </li>
+                </ul>
+
+                <h4>Instructions</h4>
+                <ol>
+                    <li>
+                        Download
+                        <a href="https://play.google.com/store/apps/details?id=org.strongswan.android" target="_blank"
+                            rel="noopener noreferrer">strongSwan VPN
+                            Client</a> from
+                        Google Play
+                    </li>
+                    <li>Download <b>vpnclient.sswan</b> file to your device.</li>
+                    <li>
+                        Press the button in the top right corner >
+                        <b>Import VPN profile</b> > <b>Choose the file</b>.
+                    </li>
+                    <li>Choose the <b>VPN certificate</b>.</li>
+                    <li>Connect to the <b>VPN</b>.</li>
+                </ol>
+
+                <h4>Screencast</h4>
+                <video controls preload="metadata">
+                    <source src="./media/video/screencasts/android-screencast.h264.mp4"
+                        type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" />
+                    <p>
+                        Your browser does not support HTML5 videos. Try downloading the video from
+                        <a href="./media/video/screencasts/android-screencast.h264.mp4">this link</a>
+                    </p>
+                </video>
+            </article>
+
+            <article id="linux">
+                <h3>Linux</h3>
+
+                <p>Good luck with it!</p>
+                <p>Via Network Manager</p>
+                <p>
+                    To configure your Linux computer to connect to IKEv2 as a VPN client, first install the strongSwan
+                    plugin for NetworkManager:
+                </p>
+                <code class="code-scroll-box">
+<!--   --># Ubuntu и Debian
+<!--   -->sudo apt-get update
+<!--   -->sudo apt-get install network-manager-strongswan
+  
+<!--   --># Gentoo Linux
+<!--   -->sudo emerge --sync
+<!--   -->sudo emerge net-vpn/networkmanager-strongswan
+  
+<!--   --># Arch Linux
+<!--   -->sudo pacman -Syu  # upgrade all packages
+<!--   -->sudo pacman -S networkmanager-strongswan
+  
+<!--   --># Fedora
+<!--   -->sudo yum install NetworkManager-strongswan-gnome
+  
+<!--   --># CentOS
+<!--   -->sudo yum install epel-release
+<!--   -->sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
+            </code>
+                <p>
+                    Next, securely transfer the generated <b>.p12</b> file from the repository to your Linux computer.
+                    After
+                    that, extract the CA certificate, client certificate and private key. Replace <b>vpnclient.p12</b>
+                    in the
+                    example below with the name of your <b>.p12</b> file.
+                </p>
+                <code class="code-scroll-box">
+<!--   --># Example: Extract CA certificate, client certificate and private key.
+<!--   --># You may delete the .p12 file when finished.
+<!--   -->#  Note: You may need to enter the import password, which can be found
+<!--   -->#  in the output of the IKEv2 helper script. If the output does not
+<!--   -->#  contain an import password, press Enter to continue.
+<!--   -->openssl pkcs12 -in vpnclient.p12 -cacerts -nokeys -out ikev2vpnca.cer
+<!--   -->openssl pkcs12 -in vpnclient.p12 -clcerts -nokeys -out vpnclient.cer
+<!--   -->openssl pkcs12 -in vpnclient.p12 -nocerts -nodes  -out vpnclient.key
+<!--   -->rm vpnclient.p12
+
+<!--   --># (Important) Protect certificate and private key files
+<!--   --># Note: This step is optional, but strongly recommended.
+<!--   -->sudo chown root.root ikev2vpnca.cer vpnclient.cer vpnclient.key
+<!--   -->sudo chmod 600 ikev2vpnca.cer vpnclient.cer vpnclient.key
+        </code>
+                <h4>Instructions</h4>
+                <ol>
+                    <li>
+                        Go to <b>Settings -> Network -> VPN</b>. Click the <b>+</b> button.
+                    </li>
+                    <li>Select <b> IPsec/IKEv2 (strongswan)</b>.</li>
+                    <li>Enter anything you like in the Name field.</li>
+                    <li>
+                        In the <b>Gateway (Server)</b> section, enter Your <code>VPN Server IP</code> (or DNS name) for
+                        the <b>Address</b>. / you can find it
+                        <a href="https://github.com/nezavisimost/FuckRKN1/tree/main/client-conf" target="_blank"
+                            rel="noopener noreferrer">here</a>.
+                    </li>
+                    <li>
+                        Select the <code>ikev2vpnca.cer</code> file for the <b>Certificate</b>.
+                    </li>
+                    <li>
+                        In the <b>Client</b> section, select
+                        <b>Certificate(/private key)</b> in the <b>Authentication</b> drop-down menu.
+                    </li>
+                    <li>
+                        Select <b>Certificate/private key</b> in the
+                        <b>Certificate</b> drop-down menu (if exists).
+                    </li>
+                    <li>
+                        Select the <code>vpnclient.cer</code> file for the
+                        <b>Certificate (file)</b>.
+                    </li>
+                    <li>
+                        Select the <code>vpnclient.key</code> file for the
+                        <b>Private key</b>.
+                    </li>
+                    <li>
+                        In the <b>Options</b> section, check the
+                        <b>Request an inner IP address</b> checkbox.
+                    </li>
+                    <li>
+                        In the <b>Cipher proposals (Algorithms)</b> section, check the
+                        <b>Enable custom proposals</b> checkbox.
+                    </li>
+                    <li>Leave the <b>IKE</b> field blank .</li>
+                    <li>Enter <code>aes128gcm16</code> in the <b>ESP</b> field.</li>
+                    <li>
+                        Click <b>Add</b> to save the VPN connection information.
+                    </li>
+                    <li>Turn the <b>VPN</b> switch ON.</li>
+                </ol>
+            </article>
+
+            <article id="oculus">
+                <h3>Oculus</h3>
+
+                <h4>Шаги установки:</h4>
+                <ol>
+                    <li>
+                        In order to install applications, you need to activate <b>developer mode</b> on <b>Oculus
+                            Quest2</b>
+                        (see activation guide <a
+                            href="https://developer.oculus.com/documentation/native/android/mobile-device-setup/"
+                            target="_blank" rel="noopener noreferrer">here</a>).
+                        After this step you can install third-party applications (i.e. sideloading). Then you need to
+                        transfer <a href="./client-conf/vpnclient.sswan" download="vpnclient.sswan">vpnclient.sswan</a>
+                        to your device (the process of installation is the same as on Android).
+                        This can be done via internal browser or by using <b>adb</b>. Download the file to your PC, then
+                        push it to the device:
+                        <code class="code-scroll-box">adb push vpnclient.sswan /sdcard/</code>
+                    </li>
+                    <li>
+                        The next step is <b>strong swan</b> installation. Download apk from <a
+                            href="https://download.strongswan.org/Android/" target="_blank"
+                            rel="noopener noreferrer">here</a> and install it with the next
+                        command: <code class="code-scroll-box">adb install -g -r strongSwan-2.3.3.apk</code>
+                    </li>
+                    <p>
+                        Unfortunately, the built-in file manager is quite truncated, so when you click on <b>import vpn
+                            profile</b> nothing will happen (that’s why strong swan is installed via adb). Therefore, a
+                        couple of additional steps need to be taken.
+                    </p>
+                    <li>
+                        Download any decent file manager (I personally use <a
+                            href="https://4pda.to/forum/index.php?showtopic=318294" target="_blank"
+                            rel="noopener noreferrer">Mixplorer</a>) and install it with
+                        the command:
+                        <code class="code-scroll-box">adb install -g -r mixplorer.apk</code>
+                    </li>
+                    <li>
+                        Put on your VR headset and repeat the remaining steps as when installing on <a
+                            href="#android">android</a>.
+                        Now when you click on <b>import VPN profile</b> Mixplorer will be used to navigate and select a
+                        file.
+                    </li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-wrapper">
+            <section class="footer-content">
+                <p class="white-text">
+                    Vive la résistance<br />
+                    Contacts -
+                    <a class="main__links white-text" href="https://t.me/kira2pizza" target="_blank"
+                        rel="noopener noreferrer">Telegram</a>
+                    <a class="main__links white-text" href="mailto:the2pizza@proton.me">E-mail</a>
+                </p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
