@@ -26,3 +26,6 @@
 * [**Android**](.instructions/ru/Android.md)
 * [**Linux**](./instructions/ru/Linux.md)
 * [**Oculus**](./instructions/ru/Oculus.md)
+
+## Помощь с разработкой
+[**Следуйте этой инструкции**](https://github.com/HotFixDeveloper/FuckRKN1/blob/main/CONTRIBUTION.md)
