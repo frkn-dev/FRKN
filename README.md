@@ -75,7 +75,7 @@ https://user-images.githubusercontent.com/6414316/177089620-2cb5aaa7-6250-4717-a
 [**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
 
 1. Download the **``vpnclient.mobileconfig``** file to your device.
-2. Move the file to the ``On my iPhone" folder``.
+2. Move the file to the **``On my iPhone folder``**.
 3. Open **``Settings``** and **install** the profile.
 4. Go to **``Settings``** > **``VPN``** and connect.
 
@@ -161,16 +161,16 @@ You can then set up and enable the VPN connection:
 1. Go to Settings -> Network -> VPN. Click the **+** button.
 2. Select **IPsec/IKEv2 (strongswan)**.
 3. Enter anything you like in the **Name** field.
-4. In the **Gateway (Server)** section, enter `Your VPN Server IP` (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
-5. Select the `ikev2vpnca.cer` file for the **Certificate**.
+4. In the **Gateway (Server)** section, enter **`Your VPN Server IP`** (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
+5. Select the **`ikev2vpnca.cer`** file for the **Certificate**.
 6. In the **Client** section, select **Certificate(/private key)** in the **Authentication** drop-down menu.
 7. Select **Certificate/private key** in the **Certificate** drop-down menu (if exists).
-8. Select the `vpnclient.cer` file for the **Certificate (file)**.
-9. Select the `vpnclient.key` file for the **Private key**.
+8. Select the **`vpnclient.cer`** file for the **Certificate (file)**.
+9. Select the **`vpnclient.key`** file for the **Private key**.
 10. In the **Options** section, check the **Request an inner IP address** checkbox.
 11. In the **Cipher proposals (Algorithms)** section, check the **Enable custom proposals** checkbox.
 12. Leave the **IKE** field blank.
-13. Enter `aes128gcm16` in the **ESP** field.
+13. Enter **`aes128gcm16`** in the **ESP** field.
 14. Click **Add** to save the VPN connection information.
 15. Turn the **VPN** switch ON.
 
@@ -184,7 +184,11 @@ You can then set up and enable the VPN connection:
 
 3. The next step is strong swan installation. Download `apk`
    from [**here**](https://download.strongswan.org/Android/) and install it with the
-   next command: `adb install -g -r strongSwan-2.3.3.apk`
+   next command: 
+   
+   ```console
+   adb install -g -r strongSwan-2.3.3.apk
+   ```
 
 Unfortunately, the built-in file manager is quite truncated, so when you click on `import vpn profile` nothing will
 happen (that’s why strong swan is installed via `adb`). Therefore, a couple of additional steps need to be taken.
@@ -192,7 +196,10 @@ happen (that’s why strong swan is installed via `adb`). Therefore, a couple of
 4. Download any decent file manager (I personally use
    [**Mixplorer**](https://4pda.to/forum/index.php?showtopic=318294)) and
    install it with the command:
-   `adb install -g -r mixplorer.apk`
+   
+   ```console
+   adb install -g -r mixplorer.apk
+   `
 
 5. Put on your VR headset and repeat the remaining steps as when installing on android (see [**above**](#android)). Now when you click
    on `import VPN profile` Mixplorer will be used to navigate and select a file.
