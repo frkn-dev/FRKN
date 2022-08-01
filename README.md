@@ -23,10 +23,10 @@ Configuration files are based on this [**reporsitory**](https://github.com/hwdsl
 
 ## Installation
 
-* [**Windows 7, 8, 10 and 11**](./instructions/eng/Windows 7%2C 8%2C 10 and 11.md)
-* [**OS X (macOS)**](./instructions/eng/OS X (macOS).md)
+* [**Windows 7, 8, 10 and 11**](./instructions/eng/Windows.md)
+* [**OS X (macOS)**](./instructions/eng/OSX.md)
 * [**iOS (iPhone/iPad)**](./instructions/eng/iOS.md)
 * [**Android**](.instructions/eng/Android.md)
 * [**Linux**](./instructions/eng/Linux.md)
-* [**Oculus**](./instructions/eng/Oculus VR.md)
+* [**Oculus**](./instructions/eng/Oculus.md)
 
