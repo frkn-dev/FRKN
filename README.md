@@ -26,7 +26,7 @@ Configuration files are based on this [**reporsitory**](https://github.com/hwdsl
 * [**Windows 7, 8, 10 and 11**](./instructions/en/Windows.md)
 * [**OS X (macOS)**](./instructions/en/OSX.md)
 * [**iOS (iPhone/iPad)**](./instructions/en/iOS.md)
-* [**Android**](.instructions/en/Android.md)
+* [**Android**](./instructions/en/Android.md)
 * [**Linux**](./instructions/en/Linux.md)
 * [**Oculus**](./instructions/en/Oculus.md)
 
