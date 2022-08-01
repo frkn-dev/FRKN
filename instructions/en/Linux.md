@@ -43,6 +43,7 @@ Next, securely transfer the generated `.p12` file from the repository to your Li
 # Note: You may need to enter the import password, which can be found
 #       in the output of the IKEv2 helper script. If the output does not
 #       contain an import password, press Enter to continue.
+# Note: If you have unsupported error, add -legacy flag
 openssl pkcs12 -in vpnclient.p12 -cacerts -nokeys -out ikev2vpnca.cer
 openssl pkcs12 -in vpnclient.p12 -clcerts -nokeys -out vpnclient.cer
 openssl pkcs12 -in vpnclient.p12 -nocerts -nodes  -out vpnclient.key
