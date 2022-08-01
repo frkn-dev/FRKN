@@ -23,7 +23,7 @@
 * [**Windows 7, 8, 10 and 11**](./instructions/ru/Windows.md)
 * [**OS X (macOS)**](./instructions/ru/OSX.md)
 * [**iOS (iPhone/iPad)**](./instructions/ru/iOS.md)
-* [**Android**](.instructions/ru/Android.md)
+* [**Android**](./instructions/ru/Android.md)
 * [**Linux**](./instructions/ru/Linux.md)
 * [**Oculus**](./instructions/ru/Oculus.md)
 
