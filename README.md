@@ -30,3 +30,5 @@ Configuration files are based on this [**reporsitory**](https://github.com/hwdsl
 * [**Linux**](./instructions/en/Linux.md)
 * [**Oculus**](./instructions/en/Oculus.md)
 
+## CONTRIBUTION
+[**Follow these instructions**](https://github.com/HotFixDeveloper/FuckRKN1/blob/main/CONTRIBUTION.md)
