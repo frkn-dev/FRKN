@@ -28,4 +28,4 @@
 * [**Oculus**](./instructions/ru/Oculus.md)
 
 ## Помощь с разработкой
-[**Следуйте этой инструкции**](https://github.com/HotFixDeveloper/FuckRKN1/blob/main/CONTRIBUTION.md)
+[**Следуйте этой инструкции**](CONTRIBUTION-ru.md)
