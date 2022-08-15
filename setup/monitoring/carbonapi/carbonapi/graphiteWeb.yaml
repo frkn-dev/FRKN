@@ -1,0 +1,26 @@
+# to maintain backward compatibility, this function is disabled by default
+enabled: false
+# roundrobin will be used in case multiple URLs are specified
+fallbackUrls:
+    - http://localhost:8081
+    - http://localhost:8080
+# if enabled, function will also check if supported parameters are the same
+strict: false
+# specify max amount of connections per each instance of graphit-web
+maxConcurrentConnections: 10
+# specify request timeouts
+timeout: "90s"
+keepAliveInterval: "30s"
+# Uncomment to make those functions force-proxied to graphite-web
+# forceAdd:
+#     - "sumSeries"
+#     - "derivative"
+
+# This will remove those functions from list of proxied ones
+# This is example and also suggestion for functions to remove.
+forceSkip:
+    - "aliasByTags"
+    - "seriesByTag"
+    - "groupByTags"
+    - "events"
+

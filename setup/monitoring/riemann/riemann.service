@@ -1,0 +1,13 @@
+[Unit]
+Description=riemann
+After=network.target
+
+[Service]
+Environment="JAR=/home/monitoring/riemann/riemann.jar"
+WorkingDirectory=/home/monitoring/riemann
+ExecStart=/home/monitoring/riemann/start.sh start riemann.config
+Type=simple
+User=monitoring
+
+[Install]
+WantedBy=multi-user.target

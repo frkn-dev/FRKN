@@ -1,0 +1,100 @@
+graphite:
+    bgColor: "white"
+    fgColor: "black"
+    colorList: ["blue", "green", "red", "purple", "brown", "yellow", "aqua", "grey", "magenta", "pink", "gold", "rose" ]
+
+graphite-dark:
+    colorList: ["blue", "green", "red", "purple", "brown", "yellow", "aqua", "grey", "magenta", "pink", "gold", "rose" ]
+
+solarized-light:
+    bgColor: "#fdf6e3"
+    fgColor: "#657b83"
+    majorLine: "#073642"
+    minorLine: "#586e75"
+    colorList: ["268bd2aa","859900aa","dc322faa","d33682aa","db4b16aa","b58900aa","2aa198aa","6c71c4aa"]
+
+solarized-dark:
+    bgColor: "#002b36"
+    fgColor: "#839496"
+    majorLine: "#fdf6e3"
+    minorLine: "#eee8d5"
+    colorList: ["268bd2aa","859900aa","dc322faa","d33682aa","db4b16aa","b58900aa","2aa198aa","6c71c4aa"]
+    fontName: "Sans"
+    fontSize: "10"
+    fontBold: false
+    fontItalic: false
+
+classic:
+    bgColor: "black"
+    fgColor: "white"
+    majorLine: "white"
+    minorLine: "grey"
+    colorList: ["blue","green","red","purple","brown","yellow","aqua","grey","magenta","pink","gold","rose"]
+    fontName: "Sans"
+    fontSize: "10"
+    fontBold: false
+    fontItalic: false
+
+noc:
+    bgColor: "black"
+    fgColor: "white"
+    majorLine: "white"
+    minorLine: "grey"
+    colorList: ["blue","green","red","yellow","purple","brown","aqua","grey","magenta","pink","gold","rose"]
+    fontName: "Sans"
+    fontSize: "10"
+    fontBold: false
+    fontItalic: false
+
+summary:
+    bgColor: "black"
+    colorList: ["#6666ff"," #66ff66"," #ff6666"]
+
+alphas:
+    bgColor: "white"
+    fgColor: "black"
+    majorLine: "grey"
+    minorLine: "rose"
+    colorList: ["00ff00aa","ff000077","00337799"]
+
+grafana:
+    bgColor: "white"
+    fgColor: "black"
+    minorLine: "grey"
+    majorLine: "rose"
+    colorList: ["#7eb26d","#eab839","#6ed0e0","#ef843c","#e24d42","#1f78c1","#ba43a9","#705da0","#508642","#cca300","#447ebc"]
+    fontName: "Sans"
+    fontSize: "10"
+    fontBold: false
+    fontItalic: false
+
+ocean1:
+    colorList: ["f7fcf0","e0f3db","ccebc5","a8ddb5","7bccc4","4eb3d3","2b8cbe","0868ac","084081"]
+
+ocean2:
+    colorList: ["084081","0868ac","2b8cbe","4eb3d3","7bccc4","a8ddb5","ccebc5","e0f3db","f7fcf0"]
+
+forest1:
+    colorList: ["f7fcf5","e5f5e0","c7e9c0","a1d99b","74c476","41ab5d","238b45","005a32"]
+
+forest2:
+    colorList: ["005a32","238b45","41ab5d","74c476","a1d99b","c7e9c0","e5f5e0","f7fcf5"]
+
+sunset1:
+    colorList: ["fff5eb","fee6ce","fdd0a2","fdae6b","fd8d3c","f16913","d94801","8c2d04"]
+
+sunset2:
+    colorList: ["8c2d04","d94801","f16913","fd8d3c","fdae6b","fdd0a2","fee6ce","fff5eb"]
+
+moonlight1:
+    colorList: ["fcfbfd","efedf5","dadaeb","bcbddc","9e9ac8","807dba","6a51a3","4a1486"]
+
+moonlight2:
+    colorList: ["4a1486","6a51a3","807dba","9e9ac8","bcbddc","dadaeb","efedf5","fcfbfd"]
+
+lava1:
+    colorList: ["fff5f0","fee0d2","fcbba1","fc9272","fb6a4a","ef3b2c","cb181d","99000d"]
+
+lava2:
+    colorList: ["99000d","cb181d","ef3b2c","fb6a4a","fc9272","fcbba1","fee0d2","fff5f0"]
+

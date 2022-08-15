@@ -1,0 +1,11 @@
+[Unit]
+Description=carbon
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/carbon -daemon=true -config /etc/carbon/carbon.conf
+Type=simple
+User=monitoring
+
+[Install]
+WantedBy=multi-user.target

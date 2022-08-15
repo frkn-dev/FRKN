@@ -1,0 +1,3 @@
+# graphite-web 1.1 assume resetEnd=true by default. However older versions of carbonapi didn't support that parameter which was equal to `false`. This forces graphite-web's behavior
+resetEndDefaultValue: true
+
