@@ -60,7 +60,7 @@ You can then set up and enable the VPN connection:
 1. Go to Settings -> Network -> VPN. Click the **+** button.
 2. Select **IPsec/IKEv2 (strongswan)**.
 3. Enter anything you like in the **Name** field.
-4. In the **Gateway (Server)** section, enter **`Your VPN Server IP`** (or DNS name) for the **Address**. / you can find it [**here**](#client-configuration-files)
+4. In the **Gateway (Server)** section, enter **`Your VPN Server IP`** (or DNS name) for the **Address**. (**``lt.fuckrkn1.xyz``**)
 5. Select the **`ikev2vpnca.cer`** file for the **Certificate**.
 6. In the **Client** section, select **Certificate(/private key)** in the **Authentication** drop-down menu.
 7. Select **Certificate/private key** in the **Certificate** drop-down menu (if exists).
