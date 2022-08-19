@@ -58,7 +58,7 @@ sudo chmod 600 ikev2vpnca.cer vpnclient.cer vpnclient.key
 1. Настройки -> Сеть -> VPN. Нажмите на кнопку `+`.
 1. Выберите **IPsec/IKEv2 (strongswan)**.
 1. Вписывайте что-угодно в поле **Название**.
-1. В секции **Gateway (Server)**, введите адрес сервера в поле **Address**. / Можете найти адрес  [**тут**](#файлы-конфигурации)
+1. В секции **Gateway (Server)**, введите адрес сервера в поле **Address**. (**``lt.fuckrkn1.xyz``**)
 1. Выберите `ikev2vpnca.cer` файл для **Certificate**.
 1. В секции **Client**, выберите **Certificate(/private key)** в поле **Authentication**.
 1. Выберите **Certificate/private key** в поле **Certificate** (ЕСЛИ У ВАС ОНО ЕСТЬ).
