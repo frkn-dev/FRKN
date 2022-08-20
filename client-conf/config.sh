@@ -3,7 +3,6 @@
 sudo apt-get update
 sudo apt-get install network-manager-strongswan
 
-echo -e '\e[33m''Если запрашивает пароль, просто нажать Enter''\e[0m'
 
 openssl_has_legacy=$(openssl pkcs12 -help 2>&1 | grep legacy)
 
@@ -15,9 +14,9 @@ else
   openssl_legacy_opt='-legacy'
 fi
 
-openssl pkcs12 -in vpnclient.p12 -cacerts -nokeys -out ikev2vpnca.cer $openssl_legacy_opt 
-openssl pkcs12 -in vpnclient.p12 -clcerts -nokeys -out vpnclient.cer $openssl_legacy_opt
-openssl pkcs12 -in vpnclient.p12 -nocerts -nodes  -out vpnclient.key $openssl_legacy_opt
+openssl pkcs12 -in vpnclient.p12 -cacerts -nokeys -out ikev2vpnca.cer $openssl_legacy_opt -password "pass:" 
+openssl pkcs12 -in vpnclient.p12 -clcerts -nokeys -out vpnclient.cer $openssl_legacy_opt  -password "pass:"
+openssl pkcs12 -in vpnclient.p12 -nocerts -nodes  -out vpnclient.key $openssl_legacy_opt  -password "pass:"
 
 rm vpnclient.p12
 
