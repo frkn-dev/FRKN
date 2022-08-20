@@ -3,7 +3,7 @@
 DST_DIR=$HOME/.pki/FuckRKN1
 
 sudo apt-get update
-sudo apt-get install network-manager-strongswan
+sudo apt-get install -y network-manager-strongswan
 
 mkdir -p $DST_DIR > /dev/null
 
