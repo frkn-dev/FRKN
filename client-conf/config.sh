@@ -18,7 +18,6 @@ openssl pkcs12 -in vpnclient.p12 -cacerts -nokeys -out ikev2vpnca.cer $openssl_l
 openssl pkcs12 -in vpnclient.p12 -clcerts -nokeys -out vpnclient.cer $openssl_legacy_opt  -password "pass:"
 openssl pkcs12 -in vpnclient.p12 -nocerts -nodes  -out vpnclient.key $openssl_legacy_opt  -password "pass:"
 
-rm vpnclient.p12
 
 sudo chown root.root ikev2vpnca.cer vpnclient.cer vpnclient.key
 sudo chmod 600 ikev2vpnca.cer vpnclient.cer vpnclient.key
