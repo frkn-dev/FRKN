@@ -1,0 +1,257 @@
+# Need to be URL, http or https
+# This url specifies the backend or a loadbalancer
+#
+# If you are using carbonzipper you should set it to
+# zipper's url
+#
+# If you are using plain go-carbon or graphite-clickhouse
+# you should set it to URL of go-carbon's carbonserver module
+# or graphite-clickhouse's http url.
+# Listen address, should always include hostname or ip address and a port.
+listeners:
+        - address: "127.0.0.1:8081"
+        - address: "[::1]:8081"
+        # OR
+        - address: "localhost:8081"
+# OR
+listen: "localhost:8081"
+
+# Specify URL Prefix for all handlers
+prefix: ""
+# Use custom caching DNS resolver instead of default one. You shouldn't use it unless you know what you are doing.
+useCachingDNSResolver: false
+# TTL for DNS records in DNS cache. Only matters if `useCachingDNSResolver` is enabled.
+cachingDNSRefreshTime: "1m"
+# Specify if metrics are exported over HTTP and if they are available on the same address or not
+# pprofEnabled controls if extra HTTP Handlers to profile and debug application will be available
+expvar:
+  enabled: true
+  pprofEnabled: false
+  listen: ""
+# Allow extra charsets in metric names. By default only "Latin" is allowed
+# Please note that each unicodeRangeTables will slow down metric parsing a bit
+#   For list of supported tables, see: https://golang.org/src/unicode/tables.go?#L3437
+#   Special name "all" reserved to append all tables that's currently supported by Go
+#unicodeRangeTables:
+#   - "Latin"
+#   - "Cyrillic"
+#   - "Hiragana"
+#   - "Katakana"
+#   - "Han"
+##   - "all"
+# Controls headers that would be passed to the backend
+headersToPass:
+  - "X-Dashboard-Id"
+  - "X-Grafana-Org-Id"
+  - "X-Panel-Id"
+headersToLog:
+  - "X-Dashboard-Id"
+  - "X-Grafana-Org-Id"
+  - "X-Panel-Id"
+# Specify custom function aliases.
+# This is example for alias "perMinute(metrics)" that will behave as "perSecond(metric)|scale(60)"
+define:
+  -
+    name: "perMinute"
+    template: "perSecond({{.argString}})|scale(60)"
+# Control what status code will be returned where /render or find query do not return any metric. Default is 200
+notFoundStatusCode: 200
+# Max concurrent requests to CarbonZipper
+concurency: 1000
+cache:
+   # Type of caching. Valid: "mem", "memcache", "null"
+   type: "mem"
+   # Cache limit in megabytes
+   size_mb: 0
+   # Default cache timeout value. Identical to DEFAULT_CACHE_DURATION in graphite-web.
+   defaultTimeoutSec: 60
+   # Only used by memcache type of cache. List of memcache servers.
+   memcachedServers:
+       - "127.0.0.1:1234"
+       - "127.0.0.2:1235"
+# Amount of CPUs to use. 0 - unlimited
+cpus: 0
+# Timezone, default - local
+tz: ""
+
+functionsConfig:
+    graphiteWeb: /etc/carbonapi/graphiteWeb.yaml
+    timeShift: /etc/carbonapi/timeShift.yaml
+#    moving: ./moving.example.yaml
+#    movingMedian: ./moving.example.yaml
+#    aliasByRedis: ./aliasByRedis.example.yaml
+maxBatchSize: 100
+graphite:
+    # Host:port where to send internal metrics
+    # Empty = disabled
+    host: "127.0.0.1"
+    interval: "60s"
+    prefix: "carbon.api"
+    # rules on how to construct metric name. For now only {prefix} and {fqdn} is supported.
+    # {prefix} will be replaced with the content of {prefix}
+    # {fqdn} will be repalced with fqdn
+    pattern: "{prefix}.{fqdn}"
+# Maximium idle connections to carbonzipper
+idleConnections: 10
+pidFile: ""
+# See https://github.com/go-graphite/carbonzipper/blob/master/example.conf#L70-L108 for format explanation
+upstreams:
+    # Use TLD Cache. Useful when you have multiple backends that could contain
+    # different TLDs.
+    #
+    # For example whenever you have multiple top level metric namespaces, like:
+    #   one_min.some.metric
+    #   ten_min.some_metric
+    #   one_hour.some_metric
+    #
+    # `one_min`, `ten_min` and `one_hour` are considered to be TLDs
+    # carbonapi by default will probe all backends and cache the responses
+    # and will know which backends would contain the prefix of the request
+    #
+    # This option allows to disable that, which could be helpful for backends like
+    # `clickhouse` or other backends where all metrics are part of the same cluster
+    tldCacheDisabled: false
+
+    # Number of 100ms buckets to track request distribution in. Used to build
+    # 'carbon.zipper.hostname.requests_in_0ms_to_100ms' metric and friends.
+    # Requests beyond the last bucket are logged as slow (default of 10 implies
+    # "slow" is >1 second).
+    # The last bucket is _not_ called 'requests_in_Xms_to_inf' on purpose, so
+    # we can change our minds about how many buckets we want to have and have
+    # their names remain consistent.
+    buckets: 10
+
+    # If request took more than specified amount of time, it will be logged as a slow request as well
+    slowLogThreshold: "1s"
+
+    timeouts:
+        # Maximum backend request time for find requests.
+        find: "2s"
+        # Maximum backend request time for render requests. This is total one and doesn't take into account in-flight requests
+        render: "10s"
+        # Timeout to connect to the server
+        connect: "200ms"
+
+    # Number of concurrent requests to any given backend - default is no limit.
+    # If set, you likely want >= MaxIdleConnsPerHost
+    concurrencyLimitPerServer: 0
+
+    # Configures how often keep alive packets will be sent out
+    keepAliveInterval: "30s"
+
+    # Control http.MaxIdleConnsPerHost. Large values can lead to more idle
+    # connections on the backend servers which may bump into limits; tune with care.
+    maxIdleConnsPerHost: 100
+
+    # Only affects cases with maxBatchSize > 0. If set to `false` requests after split will be sent out one by one, otherwise in parallel
+    doMultipleRequestsIfSplit: false
+
+    # "http://host:port" array of instances of carbonserver stores
+    # It MUST be specified.
+    backends:
+        - "http://127.0.0.1:8080"
+
+    #backends section will override this one!
+    backendsv2:
+        backends:
+          -
+            groupName: "group1"
+            # supported:
+            #    carbonapi_v2_pb - carbonapi 0.11 or earlier version of protocol.
+            #    carbonapi_v3_pb - new protocol, http interface (native)
+            #    carbonapi_v3_grpc - new protocol, gRPC interface (native)
+            #    protobuf, pb, pb3 - same as carbonapi_v2_pb
+            #    msgpack - protocol used by graphite-web 1.1 and metrictank
+            #    auto - carbonapi will do it's best to guess if it's carbonapi_v3_pb or carbonapi_v2_pb
+            #
+            #  non-native protocols will be internally converted to new protocol, which will increase memory consumption
+            protocol: "carbonapi_v2_pb"
+            # supported:
+            #    "broadcast" - send request to all backends in group and merge responses. This was default behavior for carbonapi 0.11 or earlier
+            #    "roundrobin" - send request to one backend.
+            #    "all - same as "broadcast"
+            #    "rr" - same as "roundrobin"
+            lbMethod: "broadcast"
+            # amount of retries in case of unsuccessful request
+            maxTries: 3
+            # amount of metrics per fetch request. Default: 0 - unlimited. If not specified, global will be used
+            maxBatchSize: 100
+            # interval for keep-alive http packets. If not specified, global will be used
+            keepAliveInterval: "10s"
+            # override for global concurrencyLimit.
+            concurrencyLimit: 0
+            # override for global maxIdleConnsPerHost
+            maxIdleConnsPerHost: 1000
+            # force attempt to establish HTTP2 connection, instead of http1.1. Default: false
+            # Backends must use https for this to take any effect
+            forceAttemptHTTP2: false
+            # Only affects cases with maxBatchSize > 0. If set to `false` requests after split will be sent out one by one, otherwise in parallel
+            doMultipleRequestsIfSplit: false
+            # per-group timeout override. If not specified, global will be used.
+            # Please note that ONLY min(global, local) will be used.
+            timeouts:
+                # Maximum backend request time for find requests.
+                find: "2s"
+                # Maximum backend request time for render requests. This is total one and doesn't take into account in-flight requests.
+                render: "50s"
+                # Timeout to connect to the server
+                connect: "200ms"
+            servers:
+                - "http://127.0.0.2:8080"
+                - "http://127.0.0.3:8080"
+
+          -
+            groupName: "group2"
+            protocol: "carbonapi_v3_pb"
+            lbMethod: "roundrobin"
+            servers:
+                - "http://127.0.0.4:8080"
+                - "http://127.0.0.5:8080"
+
+
+    # carbonsearch is not used if empty
+    carbonsearch:
+        # Instance of carbonsearch backend
+        backend: "http://127.0.0.1:8070"
+        # carbonsearch prefix to reserve/register
+        prefix: "virt.v1.*"
+        # carbonsearch is not used if empty
+    # carbonsearch section will override this one!
+    carbonsearchv2:
+        # Carbonsearch instances. Follows the same syntax as backendsv2
+        backends:
+            -
+              groupName: "group1"
+              protocol: "carbonapi_v2_pb"
+              lbMethod: "broadcast"
+              servers:
+                  - "http://127.0.0.4:8080"
+                  - "http://127.0.0.5:8080"
+        # carbonsearch prefix to reserve/register
+        prefix: "virt.v1.*"
+
+    # Enable compatibility with graphite-web 0.9
+    # This will affect graphite-web 1.0+ with multiple cluster_servers
+    # Default: disabled
+    graphite09compat: false
+# If not zero, enabled cache for find requests
+# This parameter controls when it will expire (in seconds)
+# Default: 600 (10 minutes)
+graphTemplates: /etc/carbonapi/graphTemplates.yaml
+expireDelaySec: 10
+# Uncomment this to get the behavior of graphite-web as proposed in https://github.com/graphite-project/graphite-web/pull/2239
+# Beware this will make darkbackground graphs less readable
+#defaultColors:
+#      "red": "ff0000"
+#      "green": "00ff00"
+#      "blue": "#0000ff"
+#      "darkred": "#c80032"
+#      "darkgreen": "00c800"
+#      "darkblue": "002173"
+logger:
+    - logger: ""
+      file: "stderr"
+      level: "debug"
+      encoding: "console"
+      encodingTime: "iso8601"
+      encodingDuration: "seconds"
