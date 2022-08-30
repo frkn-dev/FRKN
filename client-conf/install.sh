@@ -4,13 +4,20 @@ DST_DIR=$HOME/.pki/fuckRKN1
 SRC_URL="https://github.com/nezavisimost/FuckRKN1/raw/main/client-conf/vpnclient.p12"
 NM_CONN_ID='FuckRKN1'
 
-UBUNTU=$(sudo apt-get update 2> /dev/null && sudo apt-get install -y network-manager-strongswan 2> /dev/null)
-ARCH=$(sudo pacman -Syu 2> /dev/null && sudo pacman -S networkmanager-strongswan 2> /dev/null)
-FEDORA=$(sudo yum install NetworkManager-strongswan-gnome 2> /dev/null)
-GENTOO=$(sudo emerge --sync 2> /dev/null && sudo emerge net-vpn/networkmanager-strongswan 2> /dev/null)
-CENTOS=$(sudo yum install epel-release 2> /dev/null && sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome 2> /dev/null)
 
-$UBUNTU || $ARCH || $FEDORA || $GENTOO || $CENTOS
+declare -A types
+types[Debian]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
+types[Ubuntu]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
+types[Arch]="sudo pacman -Syu && sudo pacman -S networkmanager-strongswan"
+types[Fedora]="sudo yum install NetworkManager-strongswan-gnome"
+types[Gentoo]="sudo emerge --sync && sudo emerge net-vpn/networkmanager-strongswan"
+types[CentOS]="sudo yum install epel-release && sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome"
+
+select type in "Debian" "Ubuntu" "Arch" "Fedora" "Gentoo" "CentOS"
+do
+    eval "${types[$type]}"
+    break
+done
 
 wget $SRC_URL -P /tmp
 
