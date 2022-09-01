@@ -1,0 +1,56 @@
+#!/bin/bash
+
+DST_DIR=$HOME/.pki/fuckRKN1
+SRC_URL="https://github.com/nezavisimost/FuckRKN1/raw/main/client-conf/vpnclient.p12"
+NM_CONN_ID='FuckRKN1'
+
+
+declare -A types
+types[Debian]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
+types[Ubuntu]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
+types[Arch]="sudo pacman -Syu && sudo pacman -S networkmanager-strongswan"
+types[Fedora]="sudo yum install NetworkManager-strongswan-gnome"
+types[Gentoo]="sudo emerge --sync && sudo emerge net-vpn/networkmanager-strongswan"
+types[CentOS]="sudo yum install epel-release && sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome"
+
+select type in "Debian" "Ubuntu" "Arch" "Fedora" "Gentoo" "CentOS"
+do
+    eval "${types[$type]}"
+    break
+done
+
+wget $SRC_URL -P /tmp
+
+if [ $? != 0 ]; then
+  echo "Failed to download $SRC_URL"
+  exit
+fi
+
+mkdir -p $DST_DIR > /dev/null
+
+CACERT="$DST_DIR/ca.cer"
+CLIENT_CERT="$DST_DIR/client.cer"
+CLIENT_KEY="$DST_DIR/client.key"
+
+openssl_has_legacy=$(openssl pkcs12 -help 2>&1 | grep legacy)
+
+if [ -z "$openssl_has_legacy" ]
+then
+  openssl_legacy_opt=''
+
+else
+  openssl_legacy_opt='-legacy'
+fi
+
+openssl pkcs12 -in /tmp/vpnclient.p12 -cacerts -nokeys -out $CACERT $openssl_legacy_opt -password "pass:" 
+openssl pkcs12 -in /tmp/vpnclient.p12 -clcerts -nokeys -out $CLIENT_CERT $openssl_legacy_opt  -password "pass:"
+openssl pkcs12 -in /tmp/vpnclient.p12 -nocerts -nodes  -out $CLIENT_KEY $openssl_legacy_opt  -password "pass:"
+
+rm /tmp/vpnclient.p12
+
+sudo chown $USER.$USER $CACERT $CLIENT_CERT $CLIENT_KEY
+sudo chmod 600 $CACERT $CLIENT_CERT $CLIENT_KEY
+
+nmcli c delete $NM_CONN_ID > /dev/null 2>&1
+
+nmcli c add type vpn ifname -- vpn-type strongswan connection.id $NM_CONN_ID connection.autoconnect no vpn.data 'address = lt.fuckrkn1.xyz, certificate = '$CACERT', encap = no, esp = aes128gcm16, ipcomp = no, method = key, proposal = yes, usercert = '$CLIENT_CERT', userkey = '$CLIENT_KEY', virtual = yes'
