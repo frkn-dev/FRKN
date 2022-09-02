@@ -4,5 +4,5 @@
 
 Via Network Manager:
 
-Download [**Installer**](/client-conf/install.sh) and run it.
+Download /client-conf/install.sh and run it.
 [![asciicast](https://asciinema.org/a/hUffZnZGUnUo2ISSXyhoxSU7K.svg)](https://asciinema.org/a/hUffZnZGUnUo2ISSXyhoxSU7K)
