@@ -26,6 +26,7 @@
 * [**Android**](./instructions/ru/Android.md)
 * [**Linux**](./instructions/ru/Linux.md)
 * [**Oculus**](./instructions/ru/Oculus.md)
+* [**NixOS**](./instructions/ru/Nixos.md)
 
 ## Помощь с разработкой
 [**Следуйте этой инструкции**](CONTRIBUTION-ru.md)

@@ -29,6 +29,7 @@ Configuration files are based on this [**reporsitory**](https://github.com/hwdsl
 * [**Android**](./instructions/en/Android.md)
 * [**Linux**](./instructions/en/Linux.md)
 * [**Oculus**](./instructions/en/Oculus.md)
+* [**NixOS**](./instructions/en/NixOS.md)
 
 ## CONTRIBUTION
 [**Follow these instructions**](CONTRIBUTION.md)
