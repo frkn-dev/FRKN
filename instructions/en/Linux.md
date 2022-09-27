@@ -1,8 +1,13 @@
-### Linux
+# Linux
 
 **Good luck with it!**
 
-Via Network Manager
+## Via the bash-script and network manager
+
+We have a script for auto-installation of VPN profile. 
+Download [**the script**](https://github.com/nezavisimost/FuckRKN1/blob/main/client-conf/install.sh) and run it
+
+## Via the UI and network manager
 
 To configure your Linux computer to connect to IKEv2 as a VPN client, first install the strongSwan plugin for NetworkManager:
 
