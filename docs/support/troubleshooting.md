@@ -5,4 +5,5 @@
 This is a list of possible problems and links to their solution. Please, don't be afraid to contribute if this list doesn't include a trouble you faced. Make a new issue or pull request with description of the problem and its solution. 
 
 * [Connection problems](#connection-problems)
-  * [Error: Parameter is set incorrectly (Windows)](problems/ParameterIsSetIncorrectly.md)
+  * [Error: Parameter is set incorrectly (Windows)](problems/en/ParameterIsSetIncorrectly.md)
+  * [Error: Cannot connect to CIM server. Invalid namespace. (Windows)](problems/en/CimInvalidNamespace.md)
