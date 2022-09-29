@@ -18,7 +18,7 @@
 Вы можете проверить состояние серверов на нашем [мониторинге](https://m.fuckrkn1.org/d/fX0pLFiVz/fuckrkn1-dashboard?orgId=1&from=now-1h&to=now).
 
 ## FAQ
-У нас есть [список проблем](./docs/support/troubleshooting.md), с которыми мы можете столкнуться, и решения для них.
+У нас есть [список проблем](./docs/support/troubleshooting-ru.md), с которыми мы можете столкнуться, и решения для них.
 
 # IPSec 
 
