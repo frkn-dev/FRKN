@@ -14,19 +14,24 @@
 ## Спонсоры 
 Будь первым! ;)
 
+## Мониторинг
+Вы можете проверить состояние серверов на нашем [мониторинге](https://m.fuckrkn1.org/d/fX0pLFiVz/fuckrkn1-dashboard?orgId=1&from=now-1h&to=now).
+
+## FAQ
+У нас есть [список проблем](./docs/support/troubleshooting-ru.md), с которыми мы можете столкнуться, и решения для них.
+
 # IPSec 
 
 Файлы конфигурации основаны на этом [**репозитории**](https://github.com/hwdsl2/setup-ipsec-vpn.git)
 
 ## Установка
 
-* [**Windows 7, 8, 10 and 11**](./instructions/ru/Windows.md)
-* [**OS X (macOS)**](./instructions/ru/OSX.md)
-* [**iOS (iPhone/iPad)**](./instructions/ru/iOS.md)
-* [**Android**](./instructions/ru/Android.md)
-* [**Linux**](./instructions/ru/Linux.md)
-* [**Oculus**](./instructions/ru/Oculus.md)
-* [**NixOS**](./instructions/ru/NixOS.md)
+* [**Windows 7, 8, 10 and 11**](./docs/instructions/ru/Windows.md)
+* [**OS X (macOS)**](./docs/instructions/ru/OSX.md)
+* [**iOS (iPhone/iPad)**](./docs/instructions/ru/iOS.md)
+* [**Android**](./docs/instructions/ru/Android.md)
+* [**Linux**](./docs/instructions/ru/Linux.md)
+* [**Oculus**](./docs/instructions/ru/Oculus.md)
 
 ## Помощь с разработкой
 [**Следуйте этой инструкции**](CONTRIBUTION-ru.md)
