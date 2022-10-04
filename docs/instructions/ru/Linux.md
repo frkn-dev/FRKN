@@ -5,7 +5,7 @@
 ## Через bash-скрипт и Network manager:
 
 У нас есть скрипт для автоматической установки VPN профиля.
-Скачайте [**его**](https://github.com/nezavisimost/FuckRKN1/blob/main/client-conf/install.sh) и запустите.
+Скачайте [**его**](https://github.com/nezavisimost/FuckRKN1/blob/main/client-conf/install.sh) и запустите (в настоящее время скрипт не работает для NixOS).
 
 ## Через графический интерфейс и Network Manager:
 
@@ -40,7 +40,21 @@ sudo yum install epel-release
 sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
 ```
 
-Далее сохраните `.p12` файл из репозитория на ваш Linux компьютер. После этого, извлеките CA сертификат, сертификат клиента и приватный ключ. Замените `vpnclient.p12` в примере ниже на имя вашего `.p12` файла (если вы его не переименовывали, то имя заменять не придется).
+###### NixOS
+Добавьте в файл `/etc/nixos/configuration.nix` следующие строки (например, после `# List services that you want to enable:`):
+```nix
+services.dbus.packages = [ pkgs.networkmanager pkgs.strongswanNM ];
+networking.networkmanager = {
+  enable = true;
+  plugins = [ pkgs.networkmanager_strongswan ];
+};
+```
+и выполните команду
+```bash
+# nixos-rebuild switch
+```
+
+Загрузите [**vpnclient.p12**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12). После этого перейдите в директорию с файлом `vpnclient.p12` и извлеките CA сертификат, сертификат клиента и приватный ключ.
 
 ```bash
 # Пример: Извлеките CA сертификат, сертификат клиента и приватный ключ.
