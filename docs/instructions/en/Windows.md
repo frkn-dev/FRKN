@@ -3,7 +3,8 @@
 **Configuration files:**
 
 - [**ikev2_config_import.cmd**](https://s.fuckrkn1.xyz/client-conf/0.0.2/ikev2_config_import.cmd) (Copyright (C) 2022 Lin Song)
-- [**vpnclient.p12**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12)
+- [**vpnclient.p12** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12)
+- [**vpnclient.p12** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.p12)
 
 **NOTE: Server domain name: ``lt.fuckrkn1.xyz``**
 
