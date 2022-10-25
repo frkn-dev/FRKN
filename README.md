@@ -18,10 +18,10 @@ You can support us with donations or any other contribution to improve the servi
 Be the first! ;)
 
 ## Monitoring
-We have a grafana [dashboard](https://m.fuckrkn1.org/d/fX0pLFiVz/fuckrkn1-dashboard?orgId=1&from=now-1h&to=now), where you can see if servers are down. 
+We have a grafana [**dashboard**](https://m.fuckrkn1.org/d/fX0pLFiVz/fuckrkn1-dashboard?orgId=1&from=now-1h&to=now), where you can see if servers are down. 
 
 ## FAQ
-We also have a list of possible problems and their solutions [here](./docs/support/troubleshooting.md)
+We also have a list of possible problems and their solutions [**here**](./docs/support/troubleshooting.md)
 
 # IPSec 
 
