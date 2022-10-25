@@ -1,10 +1,11 @@
 ### OS X (macOS)
 
-**Configuration file:**
-[**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+**Configuration files:**
+[**vpnclient.mobileconfig** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+[**vpnclient.mobileconfig** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.mobileconfig)
 
 
-1. Download the **``vpnclient.mobileconfig``** file to your device.
+1. Download the **``vpnclient.mobileconfig``** file to your device according to required location.
 2. Double-click it, you'll get a OS notification.
 3. Open **`` → System Preferences → Profiles``** and install the profile.
 4. Open **`` → System Preferences → Network``** and connect.

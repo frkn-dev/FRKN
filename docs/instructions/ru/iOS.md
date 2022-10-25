@@ -1,9 +1,10 @@
 ### iOS (iPhone/iPad)
 
-**Файл конфигурации:**
- [**vpnclient.mobileconfig**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+**Файлы конфигурации:**
+[**vpnclient.mobileconfig** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.mobileconfig)
+[**vpnclient.mobileconfig** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.mobileconfig)
 
-1. Сохраните файл **``vpnclient.mobileconfig``** на ваше устройство.
+1. Сохраните файл **``vpnclient.mobileconfig``** на ваше устройство в соответветствии с требуемой локацией.
 2. Переместите файл в папку **``iPhone``**.
 3. Зайдите в **``настройки``** и **``установите``** профиль.
 4. Зайдите в **``Настройки``** > **``VPN``** и подключайтесь.

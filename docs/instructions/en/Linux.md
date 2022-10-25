@@ -54,7 +54,7 @@ and then run
 # nixos-rebuild switch
 ```
 
-Download [**vpnclient.p12**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12). After that go to directory of `vpnclient.p12` file and extract the CA certificate, client certificate and private key.
+Download [**vpnclient.p12** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12) or [**vpnclient.p12** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.p12) according to required location. After that go to directory of `vpnclient.p12` file and extract the CA certificate, client certificate and private key.
 
 ```bash
 # Example: Extract CA certificate, client certificate and private key.
