@@ -31,13 +31,13 @@ sudo pacman -S networkmanager-strongswan
 
 ###### Fedora
 ```bash
-sudo yum install NetworkManager-strongswan-gnome
+sudo dnf install NetworkManager-strongswan
 ```
 
 ###### CentOS
 ```bash
 sudo yum install epel-release
-sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
+sudo yum --enablerepo=epel install NetworkManager-strongswan
 ```
 
 ###### NixOS
