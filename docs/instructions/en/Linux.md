@@ -1,8 +1,13 @@
-### Linux
+# Linux
 
 **Good luck with it!**
 
-Via Network Manager
+## Via the bash-script and network manager
+
+We have a script for auto-installation of VPN profile. 
+Download [**the script**](https://github.com/nezavisimost/FuckRKN1/blob/main/client-conf/install.sh) and run it (script doesn't work for NixOS yet)
+
+## Via the UI and network manager
 
 To configure your Linux computer to connect to IKEv2 as a VPN client, first install the strongSwan plugin for NetworkManager:
 
@@ -26,16 +31,30 @@ sudo pacman -S networkmanager-strongswan
 
 ###### Fedora
 ```bash
-sudo yum install NetworkManager-strongswan-gnome
+sudo dnf install NetworkManager-strongswan
 ```
 
 ###### CentOS
 ```bash
 sudo yum install epel-release
-sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
+sudo yum --enablerepo=epel install NetworkManager-strongswan
 ```
 
-Next, securely transfer the generated `.p12` file from the repository to your Linux computer. After that, extract the CA certificate, client certificate and private key. Replace `vpnclient.p12` in the example below with the name of your `.p12` file.
+###### NixOS
+Add the following lines to `/etc/nixos/configuration.nix` (for example, to the section `# List services that you want to enable:`):
+```nix
+services.dbus.packages = [ pkgs.networkmanager pkgs.strongswanNM ];
+networking.networkmanager = {
+  enable = true;
+  plugins = [ pkgs.networkmanager_strongswan ];
+};
+```
+and then run
+```bash
+# nixos-rebuild switch
+```
+
+Download [**vpnclient.p12** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.p12) or [**vpnclient.p12** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.p12) according to required location. After that go to directory of `vpnclient.p12` file and extract the CA certificate, client certificate and private key.
 
 ```bash
 # Example: Extract CA certificate, client certificate and private key.
@@ -72,3 +91,6 @@ You can then set up and enable the VPN connection:
 13. Enter **`aes128gcm16`** in the **ESP** field.
 14. Click **Add** to save the VPN connection information.
 15. Turn the **VPN** switch ON.
+
+If after turning VPN on you get prompt that requests password for decrypting private key, check [#127](https://github.com/nezavisimost/FuckRKN1/issues/127) for fix.
+

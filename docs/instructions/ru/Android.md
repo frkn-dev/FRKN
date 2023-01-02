@@ -1,10 +1,11 @@
 ### Android
 
-**Файл конфигурации:** 
-[**vpnclient.sswan**](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.sswan)
+**Файлы конфигурации:**
+[**vpnclient.sswan** 🇱🇻](https://s.fuckrkn1.xyz/client-conf/0.0.2/vpnclient.sswan)
+[**vpnclient.sswan** 🇷🇺](https://s.fuckrkn1.xyz/client-conf/0.0.2/ru-vpnclient.sswan)
 
 1. Загрузите [**strongSwan VPN Client**](https://play.google.com/store/apps/details?id=org.strongswan.android) из **Google Play**.
-2. Сохраните файл **``vpnclient.sswan``** на ваше устройство.
+2. Сохраните файл **``vpnclient.sswan``** на ваше устройство в соответветствии с требуемой локацией.
 3. Нажмите на кнопку в верхнем-правом углу > **``Import VPN profile``** > **``Выберите файл``**.
 4. Выберите **``сертификат VPN``**.
 5. Подключайтесь к **``VPN``**.
