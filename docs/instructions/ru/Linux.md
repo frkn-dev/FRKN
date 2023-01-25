@@ -2,6 +2,12 @@
 
 **Удачи!**
 
+## Через терминал:
+Введите следующую команду в терминал:
+```bash
+curl -O https://raw.githubusercontent.com/nezavisimost/FuckRKN1/main/client-conf/install.sh && bash install.sh && rm install.sh
+```
+
 ## Через bash-скрипт и Network manager:
 
 У нас есть скрипт для автоматической установки VPN профиля.
