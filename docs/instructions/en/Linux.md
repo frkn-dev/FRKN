@@ -31,13 +31,13 @@ sudo pacman -S networkmanager-strongswan
 
 ###### Fedora
 ```bash
-sudo yum install NetworkManager-strongswan-gnome
+sudo dnf install NetworkManager-strongswan
 ```
 
 ###### CentOS
 ```bash
 sudo yum install epel-release
-sudo yum --enablerepo=epel install NetworkManager-strongswan-gnome
+sudo yum --enablerepo=epel install NetworkManager-strongswan
 ```
 
 ###### NixOS
@@ -91,3 +91,6 @@ You can then set up and enable the VPN connection:
 13. Enter **`aes128gcm16`** in the **ESP** field.
 14. Click **Add** to save the VPN connection information.
 15. Turn the **VPN** switch ON.
+
+If after turning VPN on you get prompt that requests password for decrypting private key, check [#127](https://github.com/nezavisimost/FuckRKN1/issues/127) for fix.
+

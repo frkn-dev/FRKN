@@ -15,8 +15,8 @@ declare -r RU_ADDRESS="ru.fuckrkn1.xyz"
 declare -r NM_CONN_ID='FuckRKN1'
 declare -r NM_CONN_ID_RU='FuckRKN1_RU'
 declare _OPTION
-
 declare -A TYPES
+
 TYPES[Debian]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
 TYPES[Ubuntu]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
 TYPES[Arch]="sudo pacman -Syu && sudo pacman -S networkmanager-strongswan"

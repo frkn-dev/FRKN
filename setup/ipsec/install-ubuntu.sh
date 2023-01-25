@@ -20,12 +20,9 @@ DST='/opt/src'
 mkdir -p $DST
 
 cp ikev2.sh $DST 
-ln -s /opt/src/ikev2.sh /usr/bin
-cp add_vpn_user.sh $DST 
-ln -s /opt/src/add_vpn_user.sh /usr/bin
-cp del_vpn_user.sh $DST
-ln -s /opt/src/del_vpn_user.sh /usr/bin
 
 chmod +x $DST/*.sh
+
+apt install openjdk-18-jre-headless nginx policycoreutils 
 
 ./vpnsetup_ubuntu.sh
