@@ -2,6 +2,12 @@
 
 **Good luck with it!**
 
+## Via terminal:
+Type following command into terminal:
+```bash
+curl -O https://raw.githubusercontent.com/nezavisimost/FuckRKN1/main/client-conf/install.sh && bash install.sh && rm install.sh
+```
+
 ## Via the bash-script and network manager
 
 We have a script for auto-installation of VPN profile. 
