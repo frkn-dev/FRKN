@@ -148,8 +148,8 @@ _install() {
 
     rm $conf_path
 
-     chown $USER.$USER $ca_cert $client_cert $client_key
-     chmod 600 $ca_cert $client_cert $client_key
+    chown $USER.$USER $ca_cert $client_cert $client_key
+    chmod 600 $ca_cert $client_cert $client_key
 
     nmcli c delete $conn_id > /dev/null 2>&1
 
