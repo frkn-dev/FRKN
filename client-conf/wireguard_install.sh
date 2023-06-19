@@ -1,5 +1,10 @@
 #!/bin/bash
 
+ if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root"
+    exit 1
+fi
+
 country_list=$(curl https://api.fuckrkn1.org/locations)
 values=$(jq -r '.[].code' <<< $country_list)
 
@@ -32,10 +37,10 @@ pubkey=$(echo "$peer" | jq -r ".pubkey")
 allowed_ips=$(echo "$peer" | jq -r ".allowed_ips")
 endpoint=$(echo "$peer" | jq -r ".endpoint")
 
-sudo bash -c "echo  >> $conf_path"
-sudo bash -c "echo '[wireguard-peer.$pubkey]' >> $conf_path"
-sudo bash -c "echo 'endpoint=$endpoint' >> $conf_path"
-sudo bash -c "echo 'persistent-keepalive=25' >> $conf_path"
-sudo bash -c "echo 'allowed-ips=$allowed_ips;' >> $conf_path"
+bash -c "echo  >> $conf_path"
+bash -c "echo '[wireguard-peer.$pubkey]' >> $conf_path"
+bash -c "echo 'endpoint=$endpoint' >> $conf_path"
+bash -c "echo 'persistent-keepalive=25' >> $conf_path"
+bash -c "echo 'allowed-ips=$allowed_ips;' >> $conf_path"
 
-sudo nmcli connection load "$conf_path"
+nmcli connection load "$conf_path"

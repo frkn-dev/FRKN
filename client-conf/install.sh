@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root"
+    exit 1
+fi
+
 declare -r NORMAL_COLOR="\e[0;39m"  # Сброс цвета
 declare -r GREEN_COLOR="\e[0;32m"   # Зеленый цвет
 declare -r BLUE_COLOR="\e[1;34m"    # Синий цвет
@@ -17,12 +22,12 @@ declare -r NM_CONN_ID_RU='FuckRKN1_RU'
 declare _OPTION
 declare -A TYPES
 
-TYPES[Debian]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
-TYPES[Ubuntu]="sudo apt-get update && sudo apt-get install -y network-manager-strongswan"
-TYPES[Arch]="sudo pacman -Syu && sudo pacman -S networkmanager-strongswan"
-TYPES[Fedora]="sudo dnf install NetworkManager-strongswan"
-TYPES[Gentoo]="sudo emerge --sync && sudo emerge net-vpn/networkmanager-strongswan"
-TYPES[CentOS]="sudo yum install epel-release && sudo yum --enablerepo=epel install NetworkManager-strongswan"
+TYPES[Debian]="apt-get update && apt-get install -y network-manager-strongswan"
+TYPES[Ubuntu]="apt-get update && apt-get install -y network-manager-strongswan"
+TYPES[Arch]="pacman -Syu && pacman -S networkmanager-strongswan"
+TYPES[Fedora]="dnf install NetworkManager-strongswan"
+TYPES[Gentoo]="emerge --sync && emerge net-vpn/networkmanager-strongswan"
+TYPES[CentOS]="yum install epel-release && yum --enablerepo=epel install NetworkManager-strongswan"
 
 main() {
     _draw_menu_root
@@ -143,8 +148,8 @@ _install() {
 
     rm $conf_path
 
-    sudo chown $USER.$USER $ca_cert $client_cert $client_key
-    sudo chmod 600 $ca_cert $client_cert $client_key
+     chown $USER.$USER $ca_cert $client_cert $client_key
+     chmod 600 $ca_cert $client_cert $client_key
 
     nmcli c delete $conn_id > /dev/null 2>&1
 
