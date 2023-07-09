@@ -1,0 +1,56 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install Zsh
+  apt: name=zsh state=latest
+
+- name: Install Git
+  apt: name=git state=latest
+
+- name: Install Oh-my-zsh
+  ansible.builtin.shell: wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -
+  args:
+    executable: /bin/sh
+
+- name: "Create root user's .ssh directory"
+  file:
+    path: /root/.ssh
+    state: directory
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Copy authorized_keys for SSH
+  copy: 
+    src: authorized_keys
+    dest: /root/.ssh/authorized_keys
+    owner: root
+    group: root
+    mode: 0600
+
+- name: Disabe SSH password authentication
+  ansible.builtin.shell: |
+    sed -i 's/^#PasswordAuthentication/PasswordAuthentication/g' /etc/ssh/sshd_config
+    sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+  args:
+    executable: /bin/sh
+
+- name: Configure the kernel to keep connections alive when enabling the firewall
+  sysctl:
+    name: net.netfilter.nf_conntrack_tcp_be_liberal
+    value: 1
+    state: present
+    sysctl_set: yes
+    reload: yes
+
+- name: Allow access to port 22
+  community.general.ufw:
+    rule: allow
+    port: '22'
+    direction: in
+
+- name: Deny all incoming traffic and enable UFW
+  community.general.ufw:
+    state: enabled
+    policy: deny
