@@ -1,9 +1,9 @@
 ## Base role for Ansible
 
 ### Prerequisites: 
-    ⋅⋅* Ansible must be installed
-    ⋅⋅* community.general collection must be installed
-    ⋅⋅* `ansible-galaxy collection install community.general`
+    * Ansible must be installed
+    * community.general collection must be installed
+    * `ansible-galaxy collection install community.general`
 
 The **files** subfolder should contain the `authorized_keys` file which contains ssh keys to be copied to target host. The **inventory** subfolder should contain the `hosts` inventory file. There is an example `hosts` file in the repo. You need to edit it.
 
