@@ -1,0 +1,5 @@
+- name: Base role deployment playbook
+  hosts: all
+  remote_user: user
+  roles:
+    - base
