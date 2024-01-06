@@ -4,7 +4,7 @@
 
 [**English**](README.md) | [**Русский**](README-ru.md)
 
-# [FuckRKN1](https://fuckrkn1.org/#ru): Free VPN for free humans
+# [FRKN](https://frkn.org/#ru): Privacy Company
 
 **We** are for freedom of speech and against any kind of censorship.
 
